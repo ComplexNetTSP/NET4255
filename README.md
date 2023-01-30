@@ -26,6 +26,15 @@
 
 ## Compose a simple web service (flask + mongodb) with docker compose
 
+* Find a already made [mongodb]([à](https://www.mongodb.com/)) docker container (for instance the [official mongodb docker](https://hub.docker.com/_/mongo))
+* Create a docker compose file with the following elements:
+  * Docker service for your website 
+  * Docker service for your mongodb database
+  * Network
+
+### References 
+* [Docker compose gettig started](https://docs.docker.com/compose/gettingstarted/)
+
 ## Install a load balancer for your infrastructure
 
 ## Test your infrastructure with Minikube
