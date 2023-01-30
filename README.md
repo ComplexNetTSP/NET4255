@@ -17,7 +17,7 @@
   * The version of your website (i.e. V1)
   * The current date
 * Build a docker container which contain your Flask web page
-* Send your docker container on [DockerHub](https://hub.docker.com/}
+* Send your docker container on [DockerHub](https://hub.docker.com/})
 
 ## Develop a docker file for your website database
 
