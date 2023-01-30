@@ -30,6 +30,7 @@
   * It connect to the mongodb database (use [pymongo](https://pymongo.readthedocs.io/en/stable/))
   * For each request, it will record in the mongodb database: the ip address of the client and the current date
   * It display the last 10 records of the database
+  * Update Fask app versiion displayed on the page to V2 
 * Create a docker compose file with the following elements:
   * Docker service for your website 
   * Docker service for your mongodb database
