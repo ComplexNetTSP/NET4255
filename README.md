@@ -6,7 +6,7 @@
 ## Introduction
 
 * Each step should be validated with a professor
-* You should maintain a gitlab/github repository for your project
+* You should maintain a github repository for your project
 * Before starting a given step present the sketch of your infrastructure to a professor
 
 ## 1. Develop a docker file for your website
