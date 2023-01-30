@@ -43,7 +43,11 @@
 
 ## Install a load balancer for your infrastructure
 
-Add a [Traefik](https://doc.traefik.io/traefik/) load balancer to your Docker compose file 
+Add a [Traefik](https://doc.traefik.io/traefik/) load balancer to your Docker compose file. Update your docker compose file with the following elements:
+* [Traefik load balancer](https://doc.traefik.io/traefik/)
+* Two Docker service with your Flask application  
+* Docker service for your mongodb database
+* Network
 
 ### References 
 * [Traefik](https://doc.traefik.io/traefik/)
