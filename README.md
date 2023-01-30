@@ -39,6 +39,7 @@
 
 ### References 
 * [Docker compose gettig started](https://docs.docker.com/compose/gettingstarted/)
+* [Configure the default network](https://docs.docker.com/compose/networking/)
 * [How to get the last N records in mongodb?](https://stackoverflow.com/questions/4421207/how-to-get-the-last-n-records-in-mongodb)
 
 ## Install a load balancer for your infrastructure
