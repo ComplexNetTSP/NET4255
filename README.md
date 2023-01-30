@@ -29,7 +29,7 @@
 * Find a already made [mongodb](https://www.mongodb.com/) docker container (for instance the [official mongodb docker](https://hub.docker.com/_/mongo))
 * Update Flask application such that:
   * It connect to the mongodb database (use [pymongo](https://pymongo.readthedocs.io/en/stable/))
-  * 
+  * For each web request on your flask appliation, it will record in the mongodb database: the ip address of teh client and the current date
 * Create a docker compose file with the following elements:
   * Docker service for your website 
   * Docker service for your mongodb database
