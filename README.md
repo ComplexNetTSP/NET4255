@@ -9,7 +9,7 @@
 * You should maintain a gitlab/github repository for your project
 * Before starting a given step present the sketch of your infrastructure to a professor
 
-## Develop a docker file for your website
+## 1. Develop a docker file for your website
 
 * Build a one page web page with Flask which state:
   * your name
@@ -24,7 +24,7 @@
 * [Getting started with Flask](https://flask.palletsprojects.com/en/2.2.x/quickstart/)
 * [Containerize an application](https://docs.docker.com/get-started/02_our_app/)
 
-## Compose a simple web service (flask + mongodb) with docker compose
+## 2. Compose a simple web service (flask + mongodb) with docker compose
 
 * Find a already made [mongodb](https://www.mongodb.com/) docker container (for instance the [official mongodb docker](https://hub.docker.com/_/mongo))
 * Update Flask application such that:
