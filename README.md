@@ -43,6 +43,12 @@
 
 ## Install a load balancer for your infrastructure
 
+Add a [Traefik](https://doc.traefik.io/traefik/) load balancer to your Docker compose file 
+
+### References 
+* [Traefik](https://doc.traefik.io/traefik/)
+* [Traefik Quick Start](https://doc.traefik.io/traefik/getting-started/quick-start/)
+
 ## Test your infrastructure with Minikube
 
 ## Deploy your infrastructure with kubernetes
