@@ -24,7 +24,7 @@
 * [Getting started with Flask](https://flask.palletsprojects.com/en/2.2.x/quickstart/)
 * [Containerize an application](https://docs.docker.com/get-started/02_our_app/)
 
-## Develop a docker file for your website database
+## Compose a simple web service (flask + mongodb) with docker compose
 
 ## Install a load balancer for your infrastructure
 
