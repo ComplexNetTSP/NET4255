@@ -14,6 +14,7 @@
   * your name
   * your projet name
   * The version of your website (i.e. V1)
+  * The machine hostname
   * The current date
 * Build a docker container which contain your Flask web page
 * Test your application
