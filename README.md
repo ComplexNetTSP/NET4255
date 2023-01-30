@@ -27,6 +27,9 @@
 ## Compose a simple web service (flask + mongodb) with docker compose
 
 * Find a already made [mongodb](https://www.mongodb.com/) docker container (for instance the [official mongodb docker](https://hub.docker.com/_/mongo))
+* Update Flask application such that:
+  * It connect to the mongodb database (use [pymongo](https://pymongo.readthedocs.io/en/stable/))
+  * 
 * Create a docker compose file with the following elements:
   * Docker service for your website 
   * Docker service for your mongodb database
