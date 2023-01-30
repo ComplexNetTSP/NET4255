@@ -56,6 +56,9 @@ Add a [Traefik](https://doc.traefik.io/traefik/) load balancer to your Docker co
 
 ## Test your infrastructure with Minikube
 
+### References
+* [From Docker Compose to Minikube](https://medium.com/skillshare-team/from-docker-compose-to-minikube-d94cbe97acda)
+
 ## Deploy your infrastructure with kubernetes
 
 ## Automates your deployment with Ansible
