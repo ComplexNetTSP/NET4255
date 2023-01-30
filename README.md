@@ -10,7 +10,7 @@
 
 ## 1. Develop a docker file for your website
 
-* Build a one page web page with Flask which state:
+* Build a one page Flask application which contains of following elements:
   * your name
   * your projet name
   * The version of your website (i.e. V1)
