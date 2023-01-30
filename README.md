@@ -4,9 +4,8 @@
 
 
 ## Introduction
-
-* Each step should be validated with a professor
 * You should maintain a github repository for your project
+* Each step should be validated with a professor and then commited and push on github
 * Before starting a given step present the sketch of your infrastructure to a professor
 
 ## 1. Develop a docker file for your website
