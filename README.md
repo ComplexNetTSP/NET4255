@@ -24,7 +24,7 @@
 * [Getting started with Flask](https://flask.palletsprojects.com/en/2.2.x/quickstart/)
 * [Containerize an application](https://docs.docker.com/get-started/02_our_app/)
 
-## 2. Compose a simple web service (flask + mongodb) with docker compose
+## 3. Compose a simple web service (flask + mongodb) with docker compose
 
 * Find a already made [mongodb](https://www.mongodb.com/) docker container (for instance the [official mongodb docker](https://hub.docker.com/_/mongo))
 * Update Flask application such that:
