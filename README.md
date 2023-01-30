@@ -17,9 +17,10 @@
   * The version of your website (i.e. V1)
   * The current date
 * Build a docker container which contain your Flask web page
+* Test your application
 * Send your docker container on [DockerHub](https://hub.docker.com/})
 
-### references 
+### References 
 * [Getting started with Flask](https://flask.palletsprojects.com/en/2.2.x/quickstart/)
 * [Containerize an application](https://docs.docker.com/get-started/02_our_app/)
 
