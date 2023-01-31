@@ -50,6 +50,9 @@ Add a [Traefik](https://doc.traefik.io/traefik/) load balancer to your Docker co
 * Docker service for your mongodb database
 * Network
 
+#### Notes
+The easiest way to configure the Traefik container is to define the correct label in your Docker Compose file. See the [traefik documentation](https://doc.traefik.io/traefik/routing/providers/docker/) for more details. 
+
 ### References 
 * [Traefik](https://doc.traefik.io/traefik/)
 * [Traefik Quick Start](https://doc.traefik.io/traefik/getting-started/quick-start/)
