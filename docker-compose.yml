@@ -1,0 +1,60 @@
+version: "3.9"
+services:
+  web:
+    build: web
+    ports:
+      - "8000-8002:5000"
+    networks:
+      - frontend
+      - backend
+    environment:
+      MONGO_URL: "mongodb://root:securedpassword@mongo:27017"
+      FLASK_DEBUG: "true"
+    volumes:
+      - ./web:/code
+    deploy:
+      mode: replicated
+      replicas: 3
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.web.rule=Host(`localhost`)"
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    hostname: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: securedpassword
+    networks:
+      - backend
+    ports:
+      - "27017:27017"
+
+  traefik:
+    image: traefik
+    container_name: traefik
+    hostname: traefik
+    ports: 
+      - "8080:8080"
+      - "80:80"
+    command:
+      #- "--log.level=DEBUG"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    networks:
+      - frontend
+      - backend
+
+networks:
+  frontend:
+    driver: bridge
+  backend: 
+    driver: bridge
+  #database:
+  #  build: db
+

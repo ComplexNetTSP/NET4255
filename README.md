@@ -71,3 +71,4 @@ The easiest way to configure the Traefik container is to define the correct labe
 ## Create a new version of your website and deploy it with an rolling update
 
 ## Collect build a docker container to collect all the log
+# High-Availibilty
