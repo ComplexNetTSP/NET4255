@@ -56,6 +56,8 @@ The easiest way to configure the Traefik container is to define the correct labe
 ### References 
 * [Traefik](https://doc.traefik.io/traefik/)
 * [Traefik Quick Start](https://doc.traefik.io/traefik/getting-started/quick-start/)
+* [Traefik Docker Example](https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/)
+* [Tutorial] (https://blog.silarhi.fr/docker-compose-traefik-https/)
 
 ## Test your infrastructure with Minikube
 
