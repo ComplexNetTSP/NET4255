@@ -63,6 +63,7 @@ The easiest way to configure the Traefik container is to define the correct labe
 
 ### References
 * [From Docker Compose to Minikube](https://medium.com/skillshare-team/from-docker-compose-to-minikube-d94cbe97acda)
+* [Kubernetes Tutorial](https://kubernetes.io/docs/tutorials/)
 * [Install Kubernetes on Docker Desktop](https://docs.docker.com/desktop/kubernetes/)
 * [traefik on kubernetes](https://doc.traefik.io/traefik/v1.7/user-guide/kubernetes/)
 
