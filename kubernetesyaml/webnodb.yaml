@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webnodb2
+  name: webnodb
   labels:
-    app: webnodb2
+    app: webnodb
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: webnodb2
+      app: webnodb
   template:
     metadata:
       labels:
-        app: webnodb2
+        app: webnodb
     spec:
       containers:
-      - name: webnodb2
+      - name: webnodb
         image: fauconk02/high_availability:webnodb
         ports:
         - containerPort: 5000
@@ -25,7 +25,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: webnodb2
+  name: webnodb
 spec:
   type: NodePort
   selector:
