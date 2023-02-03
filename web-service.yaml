@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.0 (40646f47)
+    traefik.enable: "true"
+    traefik.http.routers.web.rule: Host(`web.localhost`) && PathPrefix(`/`)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: web
+  name: web
+spec:
+  ports:
+    - name: "8000"
+      port: 8000
+      targetPort: 5000
+    - name: "8001"
+      port: 8001
+      targetPort: 5000
+    - name: "8002"
+      port: 8002
+      targetPort: 5000
+  selector:
+    io.kompose.service: web
+status:
+  loadBalancer: {}
