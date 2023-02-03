@@ -8,7 +8,7 @@
 * Each step should be validated with a professor and then commited and push on github
 * Before starting a given step present the sketch of your infrastructure to a professor
 
-## 1. Develop a docker file for your website
+## challenge 1. Develop a docker file for your website
 
 * Build a one page Flask application which contains of following elements:
   * your name
@@ -24,7 +24,7 @@
 * [Getting started with Flask](https://flask.palletsprojects.com/en/2.2.x/quickstart/)
 * [Containerize an application](https://docs.docker.com/get-started/02_our_app/)
 
-## 3. Compose a simple web service (flask + mongodb) with docker compose
+## Challenge 2. Compose a simple web service (flask + mongodb) with docker compose
 
 * Find a already made [mongodb](https://www.mongodb.com/) docker container (for instance the [official mongodb docker](https://hub.docker.com/_/mongo))
 * Update Flask application such that:
@@ -42,7 +42,7 @@
 * [Configure the default network](https://docs.docker.com/compose/networking/)
 * [How to get the last N records in mongodb?](https://stackoverflow.com/questions/4421207/how-to-get-the-last-n-records-in-mongodb)
 
-## Install a load balancer for your infrastructure
+## Challenge 3. Install a load balancer for your infrastructure
 
 Add a [Traefik](https://doc.traefik.io/traefik/) load balancer to your Docker compose file. Update your docker compose file with the following elements:
 * [Traefik load balancer](https://doc.traefik.io/traefik/)
@@ -59,13 +59,13 @@ The easiest way to configure the Traefik container is to define the correct labe
 * [Traefik Docker Example](https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/)
 * [Tutorial] (https://blog.silarhi.fr/docker-compose-traefik-https/)
 
-## Test your infrastructure with Minikube
+## challenge 4.Test your infrastructure with Minikube
 
 ### References
 * [From Docker Compose to Minikube](https://medium.com/skillshare-team/from-docker-compose-to-minikube-d94cbe97acda)
 * [Install Kubernetes on Docker Desktop](https://docs.docker.com/desktop/kubernetes/)
 
-## Deploy your infrastructure with kubernetes
+## challenge 5. Deploy your infrastructure with kubernetes
 
 ## Automates your deployment with Ansible
 
