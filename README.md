@@ -83,7 +83,7 @@ Deploy with kubernetes command line the following items:
 * https://kubernetes.io/docs/tutorials/
 
 
-## Challenge 6: Create a Ingress file 
+## Challenge 6: Create a Ingress file (NGINX)
 
 ## Challenge 7: Deploy your infrastructure with kubernetes with DB 
 
