@@ -70,21 +70,23 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
 ### References 
 Put references here
 
-## challenge 4: Test your infrastructure with Minikube
+## challenge 5: Deploy your infrastructure with kubernetes without DB
+
+### 1. Perform the kubernetes tutorial either localy with minikube or with the help of the online tutorial
+
+### 2. Next step on the kubernetes server 
+Deploy with kubernetes command line the following items:
+* deployment of your website without db backend 
+* create a service to link the deployment  
 
 ### References
-* [From Docker Compose to Minikube](https://medium.com/skillshare-team/from-docker-compose-to-minikube-d94cbe97acda)
-* [Kubernetes Tutorial](https://kubernetes.io/docs/tutorials/)
-* [Install Kubernetes on Docker Desktop](https://docs.docker.com/desktop/kubernetes/)
-* [traefik on kubernetes](https://doc.traefik.io/traefik/v1.7/user-guide/kubernetes/)
+* https://kubernetes.io/docs/tutorials/
 
-## challenge 5: Deploy your infrastructure with kubernetes
 
-## Automates your deployment with Ansible
+## Challenge 6: Create a Ingress file 
 
-## Enable autoscaling with kubernetes
+## Challenge 7: Deploy your infrastructure with kubernetes with DB 
 
-## Create a new version of your website and deploy it with an rolling update
+## Challenge 8: Automate your deployement with HELM
 
-## Collect build a docker container to collect all the log
-# High-Availibilty
+
