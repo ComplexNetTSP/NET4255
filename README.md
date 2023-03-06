@@ -8,7 +8,7 @@
 * Each step should be validated with a professor and then commited and push on github
 * Before starting a given step present the sketch of your infrastructure to a professor
 
-## challenge 1: Develop a docker file for your website
+## Challenge 1: Develop a docker file for your website
 
 * Build a one page Flask application which contains of following elements:
   * your name
@@ -24,10 +24,26 @@
 * [Getting started with Flask](https://flask.palletsprojects.com/en/2.2.x/quickstart/)
 * [Containerize an application](https://docs.docker.com/get-started/02_our_app/)
 
-## Challenge 2: Compose a simple web service (flask + mongodb) with docker compose
+## Challenge 2: Develop a docker file for your website with a databse 
+
+* Build a one page Flask application which contains of following elements:
+  * your name
+  * your projet name
+  * The version of your website (i.e. V2)
+  * The machine hostname
+  * The current date
+  * A connexion to a mongo database:
+     * store in the db: current date, ip, page url for each requesting http-get 
+     * display the database content in the webpage 
+* Build a docker container which contain your Flask web page
+* Test your application
+* Send your docker container on [DockerHub](https://hub.docker.com/})
+
+
+## Challenge 3: Compose a simple web service (flask + mongodb) with docker compose
 
 * Find a already made [mongodb](https://www.mongodb.com/) docker container (for instance the [official mongodb docker](https://hub.docker.com/_/mongo))
-* Update Flask application such that:
+* Use the previous docker file to create a docker compose with the following items:
   * It connect to the mongodb database (use [pymongo](https://pymongo.readthedocs.io/en/stable/))
   * For each request, it will record in the mongodb database: the ip address of the client and the current date
   * It display the last 10 records of the database
@@ -42,22 +58,17 @@
 * [Configure the default network](https://docs.docker.com/compose/networking/)
 * [How to get the last N records in mongodb?](https://stackoverflow.com/questions/4421207/how-to-get-the-last-n-records-in-mongodb)
 
-## Challenge 3: Install a load balancer for your infrastructure
+## Challenge 4: Install a load balancer for your infrastructure
 
-Add a [NGINX]() load balancer to your Docker compose file. Update your docker compose file with the following elements:
-* [Traefik load balancer](https://doc.traefik.io/traefik/)
+Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/) load balancer to your Docker compose file. Update your docker compose file with the following elements:
 * Two Docker service with your Flask application  
 * Docker service for your mongodb database
 * Network
-
-#### Notes
-The easiest way to configure the Traefik container is to define the correct label in your Docker Compose file. See the [traefik documentation](https://doc.traefik.io/traefik/routing/providers/docker/) for more details. 
+* deploy 2 docker of your website without db connexions
+* deploy 2 docker of your website with db connexions
 
 ### References 
-* [Traefik](https://doc.traefik.io/traefik/)
-* [Traefik Quick Start](https://doc.traefik.io/traefik/getting-started/quick-start/)
-* [Traefik Docker Example](https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/)
-* [Tutorial](https://blog.silarhi.fr/docker-compose-traefik-https/)
+Put references here
 
 ## challenge 4: Test your infrastructure with Minikube
 
