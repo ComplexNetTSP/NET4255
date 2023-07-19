@@ -5,7 +5,7 @@ metadata:
   labels:
     app: webnodb
 spec:
-  replicas: 3
+  replicas: 15
   selector:
     matchLabels:
       app: webnodb
@@ -25,12 +25,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: webnodb
+  name: webnodb-loadbalancer
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
-    app: webnodb2
+    app: webnodb
   ports:
     - protocol: TCP
       port: 5000
-      targetPort: 5000

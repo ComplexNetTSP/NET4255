@@ -5,17 +5,14 @@ import os
 import socket
 
 app = Flask(__name__)
-print(f"### Connect to mongodb uri: { os.environ.get('MONGO_URL') }")
-client=MongoClient(os.environ.get("MONGO_URL"))
+app.config["MONGO_URL"]="mongodb://mongo:27017/dev"
+mongo=PyMongo(app)
+db=mongo.db
 hostname = socket.gethostname()
 version = "Roujanski Gatien High Availabilty V2"
 
 @app.route("/")
 def main():
-    print(request.remote_addr)
-    db = client.logs
-    collection=db['flask']
-    collection.insert_one({"ip": request.remote_addr, "date": str(datetime.now()),"server":hostname})
     return "<p>"+version+" <br> Server "+hostname+"<br> See /logs </p>"
 
 @app.route("/logs")
@@ -30,3 +27,10 @@ def logs():
         res=res+str(doc["ip"])+" "+str(doc['date'])+" "+str(doc["server"])+"<br>"
     res=res+"</p>"
     return res
+
+@app.route("/db")
+def main():
+    print(request.remote_addr)
+    collection=db['flask']
+    collection.insert_one({"ip": request.remote_addr, "date": str(datetime.now()),"server":hostname})
+    return "<p>"+version+" <br> Server "+hostname+"<br> See /logs </p>"
