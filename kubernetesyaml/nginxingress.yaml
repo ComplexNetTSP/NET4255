@@ -2,16 +2,18 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: webnodb-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /*
 spec:
-  tls:
-  - hosts:
-    - netkube.luxbulb.org
-    secretName: webnodb-tls-cert
+  #tls:
+  #- hosts:
+  #  - netkube.luxbulb.org
+  #  secretName: webnodb-tls-cert
   rules:
-  - host: netkube.luxbulb.org
+  - host: 35.232.213.196
     http:
       paths:
-      - path: /
+      - path: /gatien/*
         pathType: Prefix
         backend:
           service:
