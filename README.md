@@ -64,14 +64,15 @@ On your onwn computer install the following software:
 ## Challenge 4: Install a load balancer for your infrastructure
 
 Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/) load balancer to your Docker compose file. Update your docker compose file with the following elements:
-* Two Docker service with your Flask application  
-* Docker service for your mongodb database
+* 4 Flask application
+  * deploy 2 Flask app without dabase connexions
+  * deploy 2 Flask app with database connexions
+* 1 mongodb database
 * Network
-* deploy 2 docker of your website without db connexions
-* deploy 2 docker of your website with db connexions
-
+  
 ### References 
-Put references here
+* [Sample Load balancing solution with Docker and Nginx](https://towardsdatascience.com/sample-load-balancing-solution-with-docker-and-nginx-cf1ffc60e644)
+* [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/)
 
 ## Challenge 5: Learn Kubernetes with the online tutoral 
 * Ask the professor to get access to the Kubernetes server: register your Telecom SudParis email (firstname.lastname@telecom-sudparis.eu) as a valide google address.
