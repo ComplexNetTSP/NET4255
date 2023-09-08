@@ -27,7 +27,7 @@ On your onwn computer install the following software:
 * Build a docker container which contain your Flask web page
 * Test your application
 * Send your docker container on [DockerHub](https://hub.docker.com/})
-* Draw a schema of your systems (ex. [draw.io](https://app.diagrams.net)
+* Draw a schema of your systems (ex. [draw.io](https://app.diagrams.net))
   * Show the system
   * Show the container IP address
   * Show the container ports 
@@ -40,7 +40,7 @@ On your onwn computer install the following software:
 * Find a already made [mongodb](https://www.mongodb.com/) docker container (for instance the [official mongodb docker](https://hub.docker.com/_/mongo))
 * Use docker compose to deploy your mongodb database
 * Test your application and add record in your database manualy with the mongod command ([see the install requirement for mongodb](https://www.mongodb.com/docs/v3.0/tutorial/install-mongodb-on-windows/)
-* Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net)
+* Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net))
   * Show the system
   * Show the container IP address
   * Show the container ports 
@@ -63,7 +63,7 @@ On your onwn computer install the following software:
   * Docker service for your website (you flask application)
   * Docker service for your mongodb database
   * Network to connect the previous services
-* Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net)
+* Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net))
   * Show the system
   * Show the container IP address
   * Show the container ports 
@@ -81,7 +81,7 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
   * deploy 2 Flask app with database connexions
 * 1 mongodb database
 * Network
-* Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net)
+* Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net))
   * Show the system
   * Show the container IP address and teh hostname of each container
   * Show the container ports 
@@ -92,9 +92,10 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
 
 ## Challenge 5: Learn Kubernetes with the online tutoral 
 * Ask the professor to get access to the Kubernetes server: register your Telecom SudParis email (firstname.lastname@telecom-sudparis.eu) as a valide google address.
+* Follow the [Kubernetes Tutorial](https://kubernetes.io/docs/tutorials/)
 
 ### References
-* https://kubernetes.io/docs/tutorials/
+* [Kubernetes Tutorial](https://kubernetes.io/docs/tutorials/)
   
 ## challenge 6: Deploy your infrastructure with kubernetes without DB
 * Deployenment and services without database
