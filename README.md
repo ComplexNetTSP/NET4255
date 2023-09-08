@@ -32,7 +32,7 @@ On your onwn computer install the following software:
 * [Getting started with Flask](https://flask.palletsprojects.com/en/2.2.x/quickstart/)
 * [Containerize an application](https://docs.docker.com/get-started/02_our_app/)
 
-## Challenge 2: Create docker compose to deploy a mongodb database server 
+## Challenge 2: Create docker compose to deploy a mongodb database server (2pts)
 * Find a already made [mongodb](https://www.mongodb.com/) docker container (for instance the [official mongodb docker](https://hub.docker.com/_/mongo))
 * Use docker compose to deploy your mongodb database
 * Test your application and add record in your database manualy with the mongod command ([see the install requirement for mongodb](https://www.mongodb.com/docs/v3.0/tutorial/install-mongodb-on-windows/)
