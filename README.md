@@ -34,9 +34,8 @@ On your onwn computer install the following software:
 
 ## Challenge 2: Build a docker file to host a database server 
 * Find a already made [mongodb](https://www.mongodb.com/) docker container (for instance the [official mongodb docker](https://hub.docker.com/_/mongo))
-* Create a mongo database
+* Use docker compose to deploy your mongodb database
 * Test your application and add record in your database manualy with the mongod command ([see the install requirement for mongodb](https://www.mongodb.com/docs/v3.0/tutorial/install-mongodb-on-windows/)
-
 
 ## Challenge 3: Compose a simple web service (flask + mongodb) with docker compose
 * Build a one page Flask application which contains of following elements:
