@@ -12,8 +12,9 @@ Lastname: XXXXX
 
 ## Challenge 0: Install 
 On your onwn computer install the following software:
-* Docker Desktop
-* IDE (VSCode, etc)
+* [Docker Desktop](https://docs.docker.com/get-docker/)
+* [Conda](https://www.anaconda.com/download)
+* IDE ([VSCode](https://code.visualstudio.com/), etc)
 
 ## Challenge 1: Create a Simple Web page and develop a docker file for your website
 
@@ -32,26 +33,20 @@ On your onwn computer install the following software:
 * [Containerize an application](https://docs.docker.com/get-started/02_our_app/)
 
 ## Challenge 2: Build a docker file to host a database server 
+* Find a already made [mongodb](https://www.mongodb.com/) docker container (for instance the [official mongodb docker](https://hub.docker.com/_/mongo))
+* Create a mongo database
+* Test your application and add record in your database manualy with the mongod command ([see the install requirement for mongodb](https://www.mongodb.com/docs/v3.0/tutorial/install-mongodb-on-windows/)
 
+
+## Challenge 3: Compose a simple web service (flask + mongodb) with docker compose
 * Build a one page Flask application which contains of following elements:
   * your name
   * your projet name
   * The version of your website (i.e. V2)
   * The machine hostname
   * The current date
- 
-* Build a docker 
-  * A connexion to a mongo database:
-     * store in the db: current date, ip, page url for each requesting http-get 
-     * display the database content in the webpage 
-* Build a docker container which contain your Flask web page
-* Test your application
-* Send your docker container on [DockerHub](https://hub.docker.com/})
 
 
-## Challenge 3: Compose a simple web service (flask + mongodb) with docker compose
-
-* Find a already made [mongodb](https://www.mongodb.com/) docker container (for instance the [official mongodb docker](https://hub.docker.com/_/mongo))
 * Use the previous docker file to create a docker compose with the following items:
   * It connect to the mongodb database (use [pymongo](https://pymongo.readthedocs.io/en/stable/))
   * For each request, it will record in the mongodb database: the ip address of the client and the current date
@@ -109,4 +104,5 @@ Put references here
 ## Challenge 10: Create a distributed database system
 * create a a master slave architecture with mongodb 
 
-
+## Challenge 11: Deploy with HELM a service of your choice 
+* create a a master slave architecture with mongodb 
