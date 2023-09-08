@@ -1,6 +1,6 @@
 # High Availability Web Service
 
-### Teacher: [Vincent Gauthier](mailto:vincent.gauthier@telecom-sudparis.eu) [Hossam Afifi](mailto:hossam.afifi@telecom-sudparis.eu) 
+### Teacher: [Vincent Gauthier](mailto:vincent.gauthier@telecom-sudparis.eu) , [Hossam Afifi](mailto:hossam.afifi@telecom-sudparis.eu) 
 
 ## Introduction
 * You should maintain a github repository for your project
