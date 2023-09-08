@@ -61,7 +61,7 @@ On your onwn computer install the following software:
 * [Configure the default network](https://docs.docker.com/compose/networking/)
 * [How to get the last N records in mongodb?](https://stackoverflow.com/questions/4421207/how-to-get-the-last-n-records-in-mongodb)
 
-## Challenge 4: Install a load balancer for your infrastructure
+## Challenge 4: Install a load balancer for your infrastructure (2pts)
 
 Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/) load balancer to your Docker compose file. Update your docker compose file with the following elements:
 * 4 Flask application
