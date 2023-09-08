@@ -7,12 +7,12 @@
 
 ## Introduction
 * Clone this repository
-* Each Challenge **must be** validated with a professor and then commited and push to your own github repository
-* Before starting a given step present the sketch of your infrastructure to a professor
-* We strongly suggest your are using [Alpine OS](https://www.alpinelinux.org/) as base operating system for your [docker](https://www.docker.com/blog/how-to-use-the-alpine-docker-official-image/) 
+* Each challenge **must be validated** with a professor and then committed and pushed to your own github repository.
+* Before starting a given step, present the sketch of your infrastructure to a professor.
+* We strongly recommend that you use [Alpine OS](https://www.alpinelinux.org/) as the base operating system for your [docker](https://www.docker.com/blog/how-to-use-the-alpine-docker-official-image/). 
 
 ## Challenge 0: Install 
-On your onwn computer install the following software:
+On your onwn computer install the following softwares:
 * [Docker Desktop](https://docs.docker.com/get-docker/)
 * [Conda](https://www.anaconda.com/download)
 * IDE ([VSCode](https://code.visualstudio.com/), etc)
