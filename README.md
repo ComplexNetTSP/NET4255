@@ -21,9 +21,9 @@ On your onwn computer install the following software:
 * Build a one page Flask application which contains of following elements:
   * your name
   * your projet name
-  * The version of your website (i.e. V1)
-  * The machine hostname
-  * The current date
+  * the version of your website (i.e. V1)
+  * the server hostname
+  * the current date
 * Build a docker container which contain your Flask web page
 * Test your application
 * Send your docker container on [DockerHub](https://hub.docker.com/})
@@ -41,9 +41,9 @@ On your onwn computer install the following software:
 * Update your Flask application and add the following items:
   * your name
   * your projet name
-  * The version of your website (i.e. V2)
-  * The machine hostname
-  * The current date
+  * the version of your website (i.e. V2)
+  * the server hostname
+  * the current date
 * Flask apllication should connect to a mongodb database each time a request is served :
   * It connect to the mongodb database through [pymongo](https://pymongo.readthedocs.io/en/stable/)
   * For each request, it will record in the mongodb database:
