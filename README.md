@@ -1,14 +1,13 @@
 # High Availability Web Service
 
-### Teacher: [Vincent Gauthier](mailto:vincent.gauthier@telecom-sudparis.eu)
-
+### Teacher: [Vincent Gauthier](mailto:vincent.gauthier@telecom-sudparis.eu), [Hossam Afifi](mailto:hossam.afifi@telecom-sudparis.eu) 
 
 ## Introduction
 * You should maintain a github repository for your project
-* Each step should be validated with a professor and then commited and push on github
+* Each step should be validated with a professor and then commited and push to your own github
 * Before starting a given step present the sketch of your infrastructure to a professor
 
-## Challenge 1: Develop a docker file for your website
+## Challenge 1: Create a Simple Web page and develop a docker file for your website
 
 * Build a one page Flask application which contains of following elements:
   * your name
@@ -24,7 +23,7 @@
 * [Getting started with Flask](https://flask.palletsprojects.com/en/2.2.x/quickstart/)
 * [Containerize an application](https://docs.docker.com/get-started/02_our_app/)
 
-## Challenge 2: Develop a docker file for your website with a databse 
+## Challenge 2: Build a docker file to host a database server 
 
 * Build a one page Flask application which contains of following elements:
   * your name
@@ -32,6 +31,8 @@
   * The version of your website (i.e. V2)
   * The machine hostname
   * The current date
+ 
+* Build a docker 
   * A connexion to a mongo database:
      * store in the db: current date, ip, page url for each requesting http-get 
      * display the database content in the webpage 
@@ -70,7 +71,14 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
 ### References 
 Put references here
 
-## challenge 5: Deploy your infrastructure with kubernetes without DB
+## Challenge 5: Learn Kubernetes with the online tutoral 
+* Ask the professor to get access to the Kubernetes server: register your Telecom SudParis email (firstname.lastname@telecom-sudparis.eu) as a valide google address.
+
+### References
+* https://kubernetes.io/docs/tutorials/
+  
+## challenge 6: Deploy your infrastructure with kubernetes without DB
+* Deployenment and services withour database 
 
 ### 1. Perform the kubernetes tutorial either localy with minikube or with the help of the online tutorial
 
@@ -79,8 +87,7 @@ Deploy with kubernetes command line the following items:
 * deployment of your website without db backend 
 * create a service to link the deployment  
 
-### References
-* https://kubernetes.io/docs/tutorials/
+
 
 
 ## Challenge 6: Create a Ingress file (NGINX)
