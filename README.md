@@ -42,7 +42,7 @@ On your onwn computer install the following software:
 * Test your application and add record in your database manualy with the mongod command ([see the install requirement for mongodb](https://www.mongodb.com/docs/v3.0/tutorial/install-mongodb-on-windows/)
 * Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net))
   * Show the system
-  * Show the container IP address
+  * Show the containers IP address
   * Show the container ports 
 
 ## Challenge 3: Create docker compose file to deploy a simple web service (flask + mongodb) (3pts) 
@@ -83,7 +83,7 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
 * Network
 * Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net))
   * Show the system
-  * Show the container IP address and teh hostname of each container
+  * Show the container IP address and the hostname of each container
   * Show the container ports 
   
 ### References 
