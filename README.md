@@ -2,10 +2,18 @@
 
 ### Teacher: [Vincent Gauthier](mailto:vincent.gauthier@telecom-sudparis.eu), [Hossam Afifi](mailto:hossam.afifi@telecom-sudparis.eu) 
 
+Firstname: XXXXX 
+Lastname: XXXXX
+
 ## Introduction
-* You should maintain a github repository for your project
-* Each step should be validated with a professor and then commited and push to your own github
+* Clone this repository
+* Each Challenge **must be** validated with a professor and then commited and push to your own github repository
 * Before starting a given step present the sketch of your infrastructure to a professor
+
+## Challenge 0: Install 
+On your onwn computer install the following software:
+* Docker Desktop
+* IDE (VSCode, etc)
 
 ## Challenge 1: Create a Simple Web page and develop a docker file for your website
 
@@ -78,22 +86,27 @@ Put references here
 * https://kubernetes.io/docs/tutorials/
   
 ## challenge 6: Deploy your infrastructure with kubernetes without DB
-* Deployenment and services withour database 
+* Deployenment and services without database
+* Autocaling
+* Minumum of 3 servers 
 
-### 1. Perform the kubernetes tutorial either localy with minikube or with the help of the online tutorial
-
-### 2. Next step on the kubernetes server 
-Deploy with kubernetes command line the following items:
-* deployment of your website without db backend 
-* create a service to link the deployment  
-
-
-
-
-## Challenge 6: Create a Ingress file (NGINX)
-
-## Challenge 7: Deploy your infrastructure with kubernetes with DB 
+## challenge 7: Deploy your infrastructure with kubernetes without DB
+* Deployenment with ingress without database
+* Create a schema to explain how a request is served by a docker container (i.e. a pod):
+  * the schema should explain wich port is used at each step and what IP address is used by each componenent
+ 
+## challenge 7: Deploy your infrastructure with kubernetes and with DB 
+* don't use helm to deploy your database 
 
 ## Challenge 8: Automate your deployement with HELM
+
+## Challenge 9: Create a Network policy 
+* Goal restrict the access to to database only to IP address corresponding to your Web Pod 
+
+## Challenge 9: Create a Network policy 
+* Goal restrict the access to to database only to IP address corresponding to your Web Pod 
+
+## Challenge 10: Create a distributed database system
+* create a a master slave architecture with mongodb 
 
 
