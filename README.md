@@ -27,6 +27,10 @@ On your onwn computer install the following software:
 * Build a docker container which contain your Flask web page
 * Test your application
 * Send your docker container on [DockerHub](https://hub.docker.com/})
+* Draw a schema of your systems (ex. [draw.io](https://app.diagrams.net)
+  * Show the system
+  * Show the container IP address
+  * Show the container ports 
 
 ### References 
 * [Getting started with Flask](https://flask.palletsprojects.com/en/2.2.x/quickstart/)
@@ -36,6 +40,10 @@ On your onwn computer install the following software:
 * Find a already made [mongodb](https://www.mongodb.com/) docker container (for instance the [official mongodb docker](https://hub.docker.com/_/mongo))
 * Use docker compose to deploy your mongodb database
 * Test your application and add record in your database manualy with the mongod command ([see the install requirement for mongodb](https://www.mongodb.com/docs/v3.0/tutorial/install-mongodb-on-windows/)
+* Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net)
+  * Show the system
+  * Show the container IP address
+  * Show the container ports 
 
 ## Challenge 3: Create docker compose file to deploy a simple web service (flask + mongodb) (3pts) 
 * Update your Flask application and add the following items:
@@ -54,7 +62,11 @@ On your onwn computer install the following software:
 * Finaly deploy your services using a docker compose file with the following elements:
   * Docker service for your website (you flask application)
   * Docker service for your mongodb database
-  * Network to connect the previous services 
+  * Network to connect the previous services
+* Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net)
+  * Show the system
+  * Show the container IP address
+  * Show the container ports 
 
 ### References 
 * [Docker compose gettig started](https://docs.docker.com/compose/gettingstarted/)
@@ -69,6 +81,10 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
   * deploy 2 Flask app with database connexions
 * 1 mongodb database
 * Network
+* Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net)
+  * Show the system
+  * Show the container IP address and teh hostname of each container
+  * Show the container ports 
   
 ### References 
 * [Sample Load balancing solution with Docker and Nginx](https://towardsdatascience.com/sample-load-balancing-solution-with-docker-and-nginx-cf1ffc60e644)
