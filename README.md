@@ -1,9 +1,9 @@
-# High Availability Web Service
+# NET 4251: High Availability Web Service
 
 ### Teacher: [Vincent Gauthier](mailto:vincent.gauthier@telecom-sudparis.eu), [Hossam Afifi](mailto:hossam.afifi@telecom-sudparis.eu) 
 
-Firstname: XXXXX 
-Lastname: XXXXX
+* Firstname: XXXXX 
+* Lastname: XXXXX
 
 ## Introduction
 * Clone this repository
@@ -16,7 +16,7 @@ On your onwn computer install the following software:
 * [Conda](https://www.anaconda.com/download)
 * IDE ([VSCode](https://code.visualstudio.com/), etc)
 
-## Challenge 1: Create a Simple Web page and develop a docker file for your website
+## Challenge 1: Create a Simple Web page and develop a docker file for your website (2 pts)
 
 * Build a one page Flask application which contains of following elements:
   * your name
@@ -32,29 +32,29 @@ On your onwn computer install the following software:
 * [Getting started with Flask](https://flask.palletsprojects.com/en/2.2.x/quickstart/)
 * [Containerize an application](https://docs.docker.com/get-started/02_our_app/)
 
-## Challenge 2: Build a docker file to host a database server 
+## Challenge 2: Create docker compose to deploy a mongodb database server 
 * Find a already made [mongodb](https://www.mongodb.com/) docker container (for instance the [official mongodb docker](https://hub.docker.com/_/mongo))
 * Use docker compose to deploy your mongodb database
 * Test your application and add record in your database manualy with the mongod command ([see the install requirement for mongodb](https://www.mongodb.com/docs/v3.0/tutorial/install-mongodb-on-windows/)
 
-## Challenge 3: Compose a simple web service (flask + mongodb) with docker compose
-* Build a one page Flask application which contains of following elements:
+## Challenge 3: Create docker compose file to deploy a simple web service (flask + mongodb) 
+* Update your Flask application and add the following items:
   * your name
   * your projet name
   * The version of your website (i.e. V2)
   * The machine hostname
   * The current date
-
-
-* Use the previous docker file to create a docker compose with the following items:
-  * It connect to the mongodb database (use [pymongo](https://pymongo.readthedocs.io/en/stable/))
-  * For each request, it will record in the mongodb database: the ip address of the client and the current date
-  * It display the last 10 records of the database
-  * Update Fask app versiion displayed on the page to V2 
-* Create a docker compose file with the following elements:
-  * Docker service for your website 
+* Flask apllication should connect to a mongodb database each time a request is served :
+  * It connect to the mongodb database through [pymongo](https://pymongo.readthedocs.io/en/stable/)
+  * For each request, it will record in the mongodb database:
+    * the ip address of the client
+    * the current date
+* your flask application should display the last 10 records of the database
+* Update Fask app version displayed on the page to V2
+* Finaly deploy your services using a docker compose file with the following elements:
+  * Docker service for your website (you flask application)
   * Docker service for your mongodb database
-  * Network
+  * Network to connect the previous services 
 
 ### References 
 * [Docker compose gettig started](https://docs.docker.com/compose/gettingstarted/)
