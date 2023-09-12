@@ -95,7 +95,20 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
 ## Challenge 5: Learn Kubernetes with the online tutoral (2pts)
 * Ask the professor to get access to the Kubernetes server: register your Telecom SudParis email (firstname.lastname@telecom-sudparis.eu) as a valide google address.
 * Install [gcloud cli](https://cloud.google.com/sdk/docs/install?hl=fr#linux)
-* Install [kubectl](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl?hl=fr#gcloud) 
+* Install [kubectl](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl?hl=fr#gcloud)
+* Install the kubeconfig file on your computer
+
+```bash
+> gcloud container clusters get-credentials net4251 --region=us-central1
+```
+
+after this command your should kubeconfig.yml file on your laptop
+
+```bash
+> ls $HOME/.kube/
+kubeconfig.yml
+```
+
 * Follow the [Kubernetes Tutorial](https://kubernetes.io/docs/tutorials/)
 
 ### References
