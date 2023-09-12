@@ -77,9 +77,10 @@ On your onwn computer install the following softwares:
 ## Challenge 4: Install a load balancer for your infrastructure (2pts)
 
 Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/) load balancer to your Docker compose file. Update your docker compose file with the following elements:
-* 4 Flask application
-  * deploy 2 Flask app without dabase connexions
-  * deploy 2 Flask app with database connexions
+* 2 Flask application
+  * Deploy 1 Flask app without dabase connexions
+  * Deploy 1 Flask app with database connexions
+* 1 NGINX load balancer which load balance the load between the two web server
 * 1 mongodb database
 * Network
 * Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net))
