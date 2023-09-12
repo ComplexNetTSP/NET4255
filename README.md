@@ -109,10 +109,10 @@ after this command your should have kubeconfig.yml file on your laptop. This fil
 kubeconfig.yml
 ```
 
-check the following command in order to check the connexion 
+Check the following command in order to check the connexion. You sould see a namespace with your name !!!
 
 ```bash
-> kubectl get nodes
+> kubectl get namespace
 ```
 
 * Follow the [Kubernetes Tutorial](https://kubernetes.io/docs/tutorials/)
