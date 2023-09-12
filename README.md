@@ -102,11 +102,17 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
 > gcloud container clusters get-credentials net4251 --region=us-central1
 ```
 
-after this command your should kubeconfig.yml file on your laptop
+after this command your should have kubeconfig.yml file on your laptop. This file will enable you to get access to the kubernetes cluster.
 
 ```bash
 > ls $HOME/.kube/
 kubeconfig.yml
+```
+
+check the following command in order to check the connexion 
+
+```bash
+> kubectl get nodes
 ```
 
 * Follow the [Kubernetes Tutorial](https://kubernetes.io/docs/tutorials/)
