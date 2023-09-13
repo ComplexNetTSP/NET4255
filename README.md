@@ -2,9 +2,6 @@
 
 ### Teacher: [Vincent Gauthier](mailto:vincent.gauthier@telecom-sudparis.eu), [Hossam Afifi](mailto:hossam.afifi@telecom-sudparis.eu) 
 
-* Firstname: XXXXX 
-* Lastname: XXXXX
-
 ## Introduction
 * Clone this repository
 * Each challenge **must be validated** with a professor and then committed and pushed to your own github repository.
@@ -120,28 +117,36 @@ Check the following command in order to check the connexion. You sould see a nam
 ### References
 * [Kubernetes Tutorial](https://kubernetes.io/docs/tutorials/)
   
-## challenge 6: Lauch your first Pod in command line (1pts)
-Create your first deployemnt in command lien with the **kubectl** command: 
+## Challenge 6: Lauch your first Pod in command line (1pts)
+Create your first deployemnt in command line with the **kubectl** command: 
 * Create a deployment for the webnodb container in your own namespace
    * without any replicat
    * without **any service**
-* Check that your deployment is sucessfull
+* Check that your deployment is sucessfull in the [google cloud console](https://console.cloud.google.com/kubernetes/) and with the command line: 
+```bash 
+$ kubectl get deployments -o wide
+...
+$ kubectl get pods -o wide
+...
+```
 
-### Refernces
-* 
-## challenge 7: Create your first deployement file with a clusterIP service (1pts)
-* Create a deployenment file for your container **without database**
-* becarful, create your deployment in your on namespace 
-* Create a schema to explain how a request is served to the pod (i.e. a pod):
+### References
+* [Deploying your first app on Kubernetes](https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-intro/)
+
+## Challenge 7: Create your first deployement file with a clusterIP service (1pts)
+* Create a Deployment file for your container webnodb (** the one without database**)
+* becareful, create your deployment in your on namespace !!!!
+* show on a new schema how a request is served from the service to the pods:
   * the schema should explain wich port is used at each step and what IP address is used by each componenent (nodes, pods, services)
-* connect to the cluster through a proxy with teh foillowing command:
+* connect to the cluster through a proxy with the foillowing command:
 
 ```bash
 $ kubectl proxy
 Starting to serve on 127.0.0.1:8001 
 ```
-now your can access to the **webnodb** web page at the following url 
-27.0.0.1:8001/api/v1/namespaces/**your namespace name**/services/** your service name**/proxy/
+
+Now should be able to access to the **webnodb** web page at the following url: 
+```http://127.0.0.1:8001/api/v1/namespaces/__your_namespace_name__/services/__your_service_name__/proxy/```
 
 ### References
 * [Kubernetes YAML File Explained - Deployment and Service](https://youtu.be/qmDzcu5uY1I?si=jeoMTcyKxxQ70jmG)
