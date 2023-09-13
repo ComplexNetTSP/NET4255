@@ -120,16 +120,34 @@ Check the following command in order to check the connexion. You sould see a nam
 ### References
 * [Kubernetes Tutorial](https://kubernetes.io/docs/tutorials/)
   
-## challenge 6: Deploy your infrastructure with kubernetes without DB
-* Deployenment and services without database
-* Autocaling
-* Minumum of 3 servers 
+## challenge 6: Lauch your first Pod in command line (1pts)
+Create your first deployemnt in command lien with the **kubectl** command: 
+* Create a deployment for the webnodb container in your own namespace
+   * without any replicat
+   * without **any service**
+* Check that your deployment is sucessfull
 
-## challenge 7: Deploy your infrastructure with kubernetes without DB
-* Deployenment with ingress without database
-* Create a schema to explain how a request is served by a docker container (i.e. a pod):
-  * the schema should explain wich port is used at each step and what IP address is used by each componenent
- 
+### Refernces
+* 
+## challenge 7: Create your first deployement file with a clusterIP service (1pts)
+* Create a deployenment file for your container **without database**
+* becarful, create your deployment in your on namespace 
+* Create a schema to explain how a request is served to the pod (i.e. a pod):
+  * the schema should explain wich port is used at each step and what IP address is used by each componenent (nodes, pods, services)
+* connect to the cluster through a proxy with teh foillowing command:
+
+```bash
+$ kubectl proxy
+Starting to serve on 127.0.0.1:8001 
+```
+now your can access to the **webnodb** web page at the following url 
+27.0.0.1:8001/api/v1/namespaces/**your namespace name**/services/** your service name**/proxy/
+
+### References
+* [Kubernetes YAML File Explained - Deployment and Service](https://youtu.be/qmDzcu5uY1I?si=jeoMTcyKxxQ70jmG)
+* [Accessing services running on the cluster](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster-services/)
+* [Manually constructing apiserver proxy URLs](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster-services/#manually-constructing-apiserver-proxy-urls)
+  
 ## challenge 7: Deploy your infrastructure with kubernetes and with DB 
 * don't use helm to deploy your database 
 
