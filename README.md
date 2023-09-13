@@ -106,10 +106,15 @@ after this command your should have kubeconfig.yml file on your laptop. This fil
 kubeconfig.yml
 ```
 
-Check the following command in order to check the connexion. You sould see a namespace with your name !!!
-
+Check the following command in order to check the connexion. 
 ```bash
-> kubectl get namespace
+$ kubectl cluster-info
+...
+```
+
+You sould see a namespace with your name !!! with teh following command:
+```bash
+$ kubectl get namespace
 ```
 
 * Follow the [Kubernetes Tutorial](https://kubernetes.io/docs/tutorials/)
@@ -135,7 +140,7 @@ $ kubectl get pods -o wide
 
 ## Challenge 7: Create your first deployement file with a clusterIP service (1pts)
 * Create a Deployment file for your container webnodb (** the one without database**)
-* becareful, create your deployment in your on namespace !!!!
+* becareful, create your **Deployment** and **the ClusterIP service** in your on namespace !!!!
 * show on a new schema how a request is served from the service to the pods:
   * the schema should explain wich port is used at each step and what IP address is used by each componenent (nodes, pods, services)
 * connect to the cluster through a proxy with the foillowing command:
