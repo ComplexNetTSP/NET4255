@@ -135,8 +135,17 @@ $ kubectl get pods -o wide
 ...
 ```
 
+* Test the pod web server id correctmy running with port-forwarding 
+```bash
+kubectl port-forward pods/xxxx your pod name xxxx :xxx pod port xxx --namespace=xxxx your namespace xxxx
+Forwarding from 127.0.0.1:54127 -> 5000
+````
+Now you can connect to with yoru browser to `http://127.0.0.1:54127` to access the webnodb website.
+
+
 ### References
 * [Deploying your first app on Kubernetes](https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-intro/)
+* [Utiliser le Port Forwarding pour accéder à des applications dans un cluster](https://kubernetes.io/fr/docs/tasks/access-application-cluster/port-forward-access-application-cluster/)
 
 ## Challenge 7: Create your first deployement file with a clusterIP service (1pts)
 * Create a Deployment file for your container webnodb (** the one without database**)
