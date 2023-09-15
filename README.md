@@ -90,7 +90,7 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
 * [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/)
 
 ## Challenge 5: Learn Kubernetes with the online tutoral (2pts)
-* Ask the professor to get access to the Kubernetes server: register your Telecom SudParis email (firstname.lastname@telecom-sudparis.eu) as a valide google address.
+* Ask the professor to get access to the Kubernetes server: register your Telecom SudParis email (firstname.lastname@telecom-sudparis.eu) as a valide google address or provide valide gmail address.
 * Install [gcloud cli](https://cloud.google.com/sdk/docs/install?hl=fr#linux)
 * Install [kubectl](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl?hl=fr#gcloud)
 * Install the kubeconfig file on your computer
@@ -135,11 +135,11 @@ $ kubectl get pods -o wide
 ...
 ```
 
-* Test the pod web server id correctmy running with port-forwarding 
+* Test the pod web server id correctly running with port-forwarding 
 ```bash
 kubectl port-forward pods/xxxx your pod name xxxx :xxx pod port xxx --namespace=xxxx your namespace xxxx
 Forwarding from 127.0.0.1:54127 -> 5000
-````
+```
 Now you can connect to with yoru browser to `http://127.0.0.1:54127` to access the webnodb website.
 
 
@@ -147,12 +147,12 @@ Now you can connect to with yoru browser to `http://127.0.0.1:54127` to access t
 * [Deploying your first app on Kubernetes](https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-intro/)
 * [Utiliser le Port Forwarding pour accéder à des applications dans un cluster](https://kubernetes.io/fr/docs/tasks/access-application-cluster/port-forward-access-application-cluster/)
 
-## Challenge 7: Create your first deployement file with a clusterIP service (1pts)
-* Create a Deployment file for your container webnodb (** the one without database**)
-* becareful, create your **Deployment** and **the ClusterIP service** in your on namespace !!!!
+## Challenge 7: Create your first deployement file with a NodePort service (1pts)
+* Create a Deployment file for your container webnodb (**the one without database**)
+* Becareful, create your **Deployment** and **the NodePort service** in your on namespace !!!!
 * show on a new schema how a request is served from the service to the pods:
   * the schema should explain wich port is used at each step and what IP address is used by each componenent (nodes, pods, services)
-* connect to the cluster through a proxy with the foillowing command:
+* connect to the cluster through a proxy with the following command or use port-forwarding to test your application:
 
 ```bash
 $ kubectl proxy
@@ -160,15 +160,49 @@ Starting to serve on 127.0.0.1:8001
 ```
 
 Now should be able to access to the **webnodb** web page at the following url: 
-```http://127.0.0.1:8001/api/v1/namespaces/__your_namespace_name__/services/__your_service_name__/proxy/```
+* `http://127.0.0.1:8001/api/v1/namespaces/__your_namespace_name__/services/__your_service_name__/proxy/`
+* Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net))
+  * Show the system
+  * Show the container IP address and the hostname of each container
+  * Show the container ports 
 
 ### References
 * [Kubernetes YAML File Explained - Deployment and Service](https://youtu.be/qmDzcu5uY1I?si=jeoMTcyKxxQ70jmG)
 * [Accessing services running on the cluster](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster-services/)
 * [Manually constructing apiserver proxy URLs](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster-services/#manually-constructing-apiserver-proxy-urls)
   
-## challenge 7: Deploy your infrastructure with kubernetes and with DB 
-* don't use helm to deploy your database 
+## Challenge 8: Deploy on the Kubernetes cluster your website (webdb) and the respective mongodb database
+
+* Deploy the webdb web service with 3 replica and its related service (**NodePort**)
+* Deploy the mongodb database and its related service (**ClusterIP**)
+* Connect the web service to teh database using kubernetes DNS hostname
+* Explain the difference between a NodePort Service and a ClusterIP service
+* Validate your deployment (webdb, mongodb) by using port-forwarding 
+* Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net))
+  * Show the system
+  * Show the container IP address and the hostname of each container
+  * Show the container ports 
+
+### References 
+* [Connecting Applications with Services](https://kubernetes.io/docs/tutorials/services/connect-applications-service/)
+
+## Challenge 9: Expose your services 
+* Create a Ingress in order to expose your web application (webnodb and webdb)
+  * GKE has some custom made feature in order to deploy Ingress, be sure to read carefully to Ingress documenation of [GKE](https://cloud.google.com/kubernetes-engine/docs/concepts/ingress?hl=fr)
+  * Don't forget to deploy your ingress in your own namespace !!!
+* The kubenetes cluster has a public IP address with the hostname: "net4251.luxbulb.org" create a service that redirect http traffic of the following url to your respective deployement: 
+  * url 1: http://webnodb.your_name.net4251.luxbulb.org/ => deployement webnodb
+  * url 2: http://webdb.your_name.net4251.luxbulb.org/ => deployement webdb
+* Test your Ingress 
+* Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net))
+  * Show the system
+  * Show the container IP address and the hostname of each container
+  * Show the container ports 
+
+**Warning, please call the teacher before applying your Ingress.**
+
+### References
+* [GKE ingress](https://cloud.google.com/kubernetes-engine/docs/concepts/ingress?hl=fr)
 
 ## Challenge 8: Automate your deployement with HELM
 
