@@ -1,10 +1,9 @@
 
-
-# NET 4255: High Availability Web Services
-
 <p align="center">
     <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/1/1d/Logo_T%C3%A9l%C3%A9com_SudParis.svg/153px-Logo_T%C3%A9l%C3%A9com_SudParis.svg.png" alt="TSP logo">
 </p>
+
+<h1 align="center">NET 4255: High Availability Web Services</h1>
 
 ### Teacher: [Vincent Gauthier](mailto:vincent.gauthier@telecom-sudparis.eu), [Hossam Afifi](mailto:hossam.afifi@telecom-sudparis.eu) 
 
