@@ -1,3 +1,5 @@
+![TSP logo](https://upload.wikimedia.org/wikipedia/fr/thumb/1/1d/Logo_T%C3%A9l%C3%A9com_SudParis.svg/490px-Logo_T%C3%A9l%C3%A9com_SudParis.svg.png)
+
 # NET 4255: High Availability Web Services
 
 ### Teacher: [Vincent Gauthier](mailto:vincent.gauthier@telecom-sudparis.eu), [Hossam Afifi](mailto:hossam.afifi@telecom-sudparis.eu) 
@@ -93,7 +95,7 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
 * Ask the professor to get access to the Kubernetes server: register your Telecom SudParis email (firstname.lastname@telecom-sudparis.eu) as a valide google address or provide valide gmail address.
 * Install [gcloud cli](https://cloud.google.com/sdk/docs/install?hl=fr#linux)
 * Install [kubectl](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl?hl=fr#gcloud)
-* you should have access to teh cluster dashboard at teh following address: [https://console.cloud.google.com/kubernetes](https://console.cloud.google.com/kubernetes)
+* you should have access to the cluster dashboard at the following address: [https://console.cloud.google.com/kubernetes](https://console.cloud.google.com/kubernetes)
 * login with gcloud 
 ```bash
 $ gcloud auth login 
