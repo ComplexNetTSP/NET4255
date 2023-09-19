@@ -1,4 +1,4 @@
-# NET 4251: High Availability Web Service
+# NET 4255: High Availability Web Services
 
 ### Teacher: [Vincent Gauthier](mailto:vincent.gauthier@telecom-sudparis.eu), [Hossam Afifi](mailto:hossam.afifi@telecom-sudparis.eu) 
 
@@ -89,14 +89,25 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
 * [Sample Load balancing solution with Docker and Nginx](https://towardsdatascience.com/sample-load-balancing-solution-with-docker-and-nginx-cf1ffc60e644)
 * [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/)
 
-## Challenge 5: Learn Kubernetes with the online tutoral (2pts)
+## Challenge 5: Learn Kubernetes with the online tutoral (1pts)
 * Ask the professor to get access to the Kubernetes server: register your Telecom SudParis email (firstname.lastname@telecom-sudparis.eu) as a valide google address or provide valide gmail address.
 * Install [gcloud cli](https://cloud.google.com/sdk/docs/install?hl=fr#linux)
 * Install [kubectl](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl?hl=fr#gcloud)
+* you should have access to teh cluster dashboard at teh following address: [https://console.cloud.google.com/kubernetes](https://console.cloud.google.com/kubernetes)
+* login with gcloud 
+```bash
+$ gcloud auth login 
+...
+```
+
+* Select net4251 as the default project 
+```bash
+$ gcloud config set project net-4251 
+```
 * Install the kubeconfig file on your computer
 
 ```bash
-> gcloud container clusters get-credentials net4251 --region=us-central1
+$ gcloud container clusters get-credentials net4251-kube-cluster --region=us-central1
 ```
 
 after this command your should have kubeconfig.yml file on your laptop. This file will enable you to get access to the kubernetes cluster.
@@ -106,13 +117,18 @@ after this command your should have kubeconfig.yml file on your laptop. This fil
 kubeconfig.yml
 ```
 
-Check the following command in order to check the connexion. 
+Export kubeconfig file  
+```bash
+export KUBECONFIG=$HOME/.kube/kubeconfig.yml
+```
+
+Now, you should be able to connect to the kuberntest cluster. Check the following command in order to check the connexion. 
 ```bash
 $ kubectl cluster-info
 ...
 ```
 
-You sould see a namespace with your name !!! with teh following command:
+You sould see a namespace with your name !!! with the following command:
 ```bash
 $ kubectl get namespace
 ```
@@ -171,7 +187,7 @@ Now should be able to access to the **webnodb** web page at the following url:
 * [Accessing services running on the cluster](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster-services/)
 * [Manually constructing apiserver proxy URLs](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster-services/#manually-constructing-apiserver-proxy-urls)
   
-## Challenge 8: Deploy on the Kubernetes cluster your website (webdb) and the respective mongodb database
+## Challenge 8: Deploy on the Kubernetes cluster your website (webdb) and the respective mongodb database (2pts)
 
 * Deploy the webdb web service with 3 replica and its related service (**NodePort**)
 * Deploy the mongodb database and its related service (**ClusterIP**)
@@ -186,7 +202,7 @@ Now should be able to access to the **webnodb** web page at the following url:
 ### References 
 * [Connecting Applications with Services](https://kubernetes.io/docs/tutorials/services/connect-applications-service/)
 
-## Challenge 9: Expose your services 
+## Challenge 9: Expose your services (1pts)
 * Create a Ingress in order to expose your web application (webnodb and webdb)
   * GKE has some custom made feature in order to deploy Ingress, be sure to read carefully to Ingress documenation of [GKE](https://cloud.google.com/kubernetes-engine/docs/concepts/ingress?hl=fr)
   * Don't forget to deploy your ingress in your own namespace !!!
@@ -204,16 +220,26 @@ Now should be able to access to the **webnodb** web page at the following url:
 ### References
 * [GKE ingress](https://cloud.google.com/kubernetes-engine/docs/concepts/ingress?hl=fr)
 
-## Challenge 8: Automate your deployement with HELM
+## Challenge 10: Automate your deployement with HELM (1pts)
+* Create a HELM Chart to deploy the whole infrastructure 
+* Use ConfigMaps to store database hostname and port information
+* Use Secrets to store the database credentials
 
-## Challenge 9: Create a Network policy 
-* Goal restrict the access to to database only to IP address corresponding to your Web Pod 
+## Challenge 11: Horizontal Scalling and Vertical Scaling 
 
-## Challenge 9: Create a Network policy 
-* Goal restrict the access to to database only to IP address corresponding to your Web Pod 
+## Challenge 12: Create a Network policy 
+* Create a Network policy that restrict the access to to database only to IP address corresponding to your Web Pods 
 
-## Challenge 10: Create a distributed database system
-* create a a master slave architecture with mongodb 
+## Challenge 13: Create a distributed database system
+* Create a a master slave architecture with mongodb 
+* create a pvc to store the database 
+* create a headless service 
+* update the your application to read from all the database in rod nroungin way but write to master
 
-## Challenge 11: Deploy with HELM a service of your choice 
-* create a a master slave architecture with mongodb 
+### References
+* [Replication Introduction](https://www.mongodb.com/docs/v2.4/core/replication-introduction/)
+* [Deploy a Replica Set](https://www.mongodb.com/docs/v2.4/tutorial/deploy-replica-set/)
+* [Kubernetes StatefulSet explained](https://youtu.be/pPQKAR1pA9U?si=pjmaqy5EvE3P4W2c)
+* [Statefulsets | Deploying MongoDB cluster to Kubernetes](https://youtu.be/eUa-IDPGL-Q?si=wcZc2AVhYXit0OSD)
+
+## Challenge 14: Deploy with HELM a service of your choice 
