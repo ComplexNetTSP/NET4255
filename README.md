@@ -245,12 +245,16 @@ Now should be able to access to the **webnodb** web page at the following url:
 * [Kubernetes Volumes explained](https://youtu.be/0swOh5C3OVM?si=LNfXMlxe39_wbazI)
 * [GKE Volumes persistants et provisionnement dynamique](https://kubernetes.io/fr/docs/concepts/storage/persistent-volumes/)
 
-## Challenge 11: Horizontal Scaling and Vertical Scaling 
+## Challenge 12: Horizontal Scaling and Vertical Scaling 
 
-## Challenge 12: Create a Network policy 
+## Challenge 13: Create a Network policies 
 * Create a Network policy that restrict access to the database only to IP address corresponding to your Web Pods 
+* Test your network policy 
 
-## Challenge 13: Create a distributed database system
+### References 
+* [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
+
+## Challenge 14: Create a distributed database system
 * Create a master-slave architecture with mongodb 
 * create a pvc to store the database 
 * create a headless service 
