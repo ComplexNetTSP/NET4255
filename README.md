@@ -11,7 +11,7 @@
 * Clone this repository
 * Each challenge **must be validated** with a professor and then committed and pushed to your own github repository.
 * Before starting a given step, present the sketch of your infrastructure to a professor.
-* We strongly recommend that you use [Alpine OS](https://www.alpinelinux.org/) as the base operating system for your [docker](https://www.docker.com/blog/how-to-use-the-alpine-docker-official-image/). 
+* We strongly recommend that you use [Alpine OS](https://www.alpinelinux.org/) as the base operating system for your [docker image](https://www.docker.com/blog/how-to-use-the-alpine-docker-official-image/). 
 
 ## Challenge 0: Install 
 On your onwn computer install the following softwares:
