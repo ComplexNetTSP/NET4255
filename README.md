@@ -230,6 +230,21 @@ Now should be able to access to the **webnodb** web page at the following url:
 * Use ConfigMaps to store database hostname and port information
 * Use Secrets to store the database credentials
 
+## Challenge 11: Update the mongodb database Deployment with a StatfulSet (1pts)
+* Instead of a traditional deployment use a StafulSet to deploy your mongodb database 
+* Use a Persistant Volume to store the database content 
+* Update the previous mongodb service with a headless service
+* There should be only one replicat for the mongodb database
+* Explain what is a StatefulSet and in which case it is usefull
+* Explain what is a headless service 
+* Update your previous Helm chart accordinly 
+
+### References 
+* [Kubernetes StatefulSet simply explained](https://youtu.be/pPQKAR1pA9U?si=as0jDo02sCPmBR43)
+* [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
+* [Kubernetes Volumes explained](https://youtu.be/0swOh5C3OVM?si=LNfXMlxe39_wbazI)
+* [GKE Volumes persistants et provisionnement dynamique](https://kubernetes.io/fr/docs/concepts/storage/persistent-volumes/)
+
 ## Challenge 11: Horizontal Scaling and Vertical Scaling 
 
 ## Challenge 12: Create a Network policy 
