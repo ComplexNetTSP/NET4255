@@ -173,6 +173,12 @@ Now you can connect with your browser to `http://127.0.0.1:54127` to access the 
 * Becareful, create your **Deployment** and **the NodePort service** in your on namespace !!!!
 * show on a new schema how a request is served from the service to the pods:
   * the schema should explain which port is used at each step and what IP address is used by each component (nodes, pods, services)
+* request the following resources per pod:
+  * cpu resource: 1/10 CPU per pod 
+  * memory: 100 Mo per pod
+* limit your pod resources as the following:
+  * cpu resourse: 1/5 of CPU per pod
+  * memory: 200 Mo per pod
 * connect to the cluster through a proxy with the following command or use port-forwarding to test your application:
 
 ```bash
@@ -191,6 +197,7 @@ Now should be able to access to the **webnodb** web page at the following url:
 * [Kubernetes YAML File Explained - Deployment and Service](https://youtu.be/qmDzcu5uY1I?si=jeoMTcyKxxQ70jmG)
 * [Accessing services running on the cluster](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster-services/)
 * [Manually constructing apiserver proxy URLs](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster-services/#manually-constructing-apiserver-proxy-urls)
+* [Resource Management for Pods and Containers](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
   
 ## Challenge 8: Deploy on the Kubernetes cluster your website (webdb) and the respective mongodb database (2pts)
 
@@ -198,7 +205,13 @@ Now should be able to access to the **webnodb** web page at the following url:
 * Deploy the mongodb database and its related service (**ClusterIP**)
 * Connect the web service to teh database using kubernetes DNS hostname
 * Explain the difference between a NodePort Service and a ClusterIP service
-* Validate your deployment (webdb, mongodb) by using port-forwarding 
+* Validate your deployment (webdb, mongodb) by using port-forwarding
+* request the following resources per pod:
+  * cpu resource: 1/10 CPU per pod 
+  * memory: 100 Mo per pod
+* limit your pod resources as the following:
+  * cpu resourse: 1/5 of CPU per pod
+  * memory: 200 Mo per pod 
 * Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net))
   * Show the system
   * Show the container IP address and the hostname of each container
@@ -238,32 +251,34 @@ Now should be able to access to the **webnodb** web page at the following url:
 * Explain what is a StatefulSet and in which case it is usefull
 * Explain what is a headless service 
 * Update your previous Helm chart accordinly 
+* your first database in the statefulSet (example: mongo-0) should have a valid DNS hostname 
 
-### References 
+### References
 * [Kubernetes StatefulSet simply explained](https://youtu.be/pPQKAR1pA9U?si=as0jDo02sCPmBR43)
 * [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
+* [Tutorial/Howto about StatefulSet](https://redhat-scholars.github.io/kubernetes-tutorial/kubernetes-tutorial/statefulset.html)
 * [Kubernetes Volumes explained](https://youtu.be/0swOh5C3OVM?si=LNfXMlxe39_wbazI)
 * [GKE Volumes persistants et provisionnement dynamique](https://kubernetes.io/fr/docs/concepts/storage/persistent-volumes/)
+* [How to set pvc with statefulset in kubernetes?](https://stackoverflow.com/questions/65266223/how-to-set-pvc-with-statefulset-in-kubernetes)
 
 ## Challenge 12: Horizontal Scaling and Vertical Scaling 
 
-## Challenge 13: Create a Network policies 
-* Create a Network policy that restrict access to the database only to IP address corresponding to your Web Pods 
-* Test your network policy 
-
-### References 
-* [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
-
-## Challenge 14: Create a distributed database system
-* Create a master-slave architecture with mongodb 
-* create a pvc to store the database 
-* create a headless service 
-* update your application to read from all the database in rod nroungin way but write to master
+## Challenge 13: Create a distributed database system
+* Create a master-slave architecture with mongodb
+* don't use already made Helm chart to achive this challenge
 
 ### References
 * [Replication Introduction](https://www.mongodb.com/docs/v2.4/core/replication-introduction/)
 * [Deploy a Replica Set](https://www.mongodb.com/docs/v2.4/tutorial/deploy-replica-set/)
 * [Kubernetes StatefulSet explained](https://youtu.be/pPQKAR1pA9U?si=pjmaqy5EvE3P4W2c)
 * [Statefulsets | Deploying MongoDB clusters to Kubernetes](https://youtu.be/eUa-IDPGL-Q?si=wcZc2AVhYXit0OSD)
+
+## Challenge 14: Create a Network policies 
+* Create a Network policy that restrict access to the database only to IP address corresponding to your Web Pods 
+* Test your network policy 
+
+### References 
+* [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
+
 
 ## Challenge 14: Deploy with HELM a service of your choice 
