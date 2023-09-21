@@ -171,23 +171,22 @@ Now you can connect with your browser to `http://127.0.0.1:54127` to access the 
 ## Challenge 7: Create your first deployment file with a NodePort service (1pts)
 * Create a Deployment file for your container webnodb (**the one without database**)
 * Becareful, create your **Deployment** and **the NodePort service** in your on namespace !!!!
-* show on a new schema how a request is served from the service to the pods:
-  * the schema should explain which port is used at each step and what IP address is used by each component (nodes, pods, services)
-* request the following resources per pod:
+* Show on a new schema how a request is served from the service to the pods:
+  * The schema should explain which port is used at each step and what IP address is used by each component (nodes, pods, services)
+* Request the following resources per pod:
   * cpu resource: 1/10 CPU per pod 
   * memory: 100 Mo per pod
-* limit your pod resources as the following:
+* Limit your pod resources as the following:
   * cpu resourse: 1/5 of CPU per pod
   * memory: 200 Mo per pod
-* connect to the cluster through a proxy with the following command or use port-forwarding to test your application:
+* Connect to the cluster through a proxy with the following command or use port-forwarding to test your application:
 
 ```bash
 $ kubectl proxy
 Starting to serve on 127.0.0.1:8001 
 ```
 
-Now should be able to access to the **webnodb** web page at the following url: 
-* `http://127.0.0.1:8001/api/v1/namespaces/__your_namespace_name__/services/__your_service_name__/proxy/`
+Now should be able to access to the **webnodb** web page at the following url `http://127.0.0.1:8001/api/v1/namespaces/__your_namespace_name__/services/__your_service_name__/proxy/`
 * Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net))
   * Show the system
   * Show the container IP address and the hostname of each container
@@ -206,10 +205,10 @@ Now should be able to access to the **webnodb** web page at the following url:
 * Connect the web service to teh database using kubernetes DNS hostname
 * Explain the difference between a NodePort Service and a ClusterIP service
 * Validate your deployment (webdb, mongodb) by using port-forwarding
-* request the following resources per pod:
+* Request the following resources per pod:
   * cpu resource: 1/10 CPU per pod 
   * memory: 100 Mo per pod
-* limit your pod resources as the following:
+* Limit your pod resources as the following:
   * cpu resourse: 1/5 of CPU per pod
   * memory: 200 Mo per pod 
 * Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net))
@@ -224,9 +223,9 @@ Now should be able to access to the **webnodb** web page at the following url:
 * Create a Ingress in order to expose your web application (webnodb and webdb)
   * GKE has some custom-made feature in order to deploy Ingress, be sure to read carefully to Ingress documentation of [GKE](https://cloud.google.com/kubernetes-engine/docs/concepts/ingress?hl=fr)
   * Don't forget to deploy your ingress in your own namespace !!!
-* The kubenetes cluster has a public IP address with the hostname: "net4251.luxbulb.org" create a service that redirects http traffic of the following url to your respective deployment: 
-  * url 1: http://webnodb.your_name.net4251.luxbulb.org/ => deployment webnodb
-  * url 2: http://webdb.your_name.net4251.luxbulb.org/ => deployment webdb
+* The kubenetes cluster has a public IP address with the hostname: "net4255.luxbulb.org" create a service that redirects http traffic of the following url to your respective deployment: 
+  * url 1: http://webnodb.your_name.net4255.luxbulb.org/ => deployment webnodb
+  * url 2: http://webdb.your_name.net4255.luxbulb.org/ => deployment webdb
 * Test your Ingress 
 * Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net))
   * Show the system
@@ -249,9 +248,9 @@ Now should be able to access to the **webnodb** web page at the following url:
 * Update the previous mongodb service with a headless service
 * There should be only one replicat for the mongodb database
 * Explain what is a StatefulSet and in which case it is usefull
-* Explain what is a headless service 
+* Explain what is a headless service, how pods are named with headless service
 * Update your previous Helm chart accordinly 
-* your first database in the statefulSet (example: mongo-0) should have a valid DNS hostname 
+* Your first database in the statefulSet (example: mongo-0) should have a valid DNS hostname 
 
 ### References
 * [Kubernetes StatefulSet simply explained](https://youtu.be/pPQKAR1pA9U?si=as0jDo02sCPmBR43)
@@ -261,11 +260,20 @@ Now should be able to access to the **webnodb** web page at the following url:
 * [GKE Volumes persistants et provisionnement dynamique](https://kubernetes.io/fr/docs/concepts/storage/persistent-volumes/)
 * [How to set pvc with statefulset in kubernetes?](https://stackoverflow.com/questions/65266223/how-to-set-pvc-with-statefulset-in-kubernetes)
 
-## Challenge 12: Horizontal Scaling and Vertical Scaling 
+## Challenge 12: Scaling deployment (1pts)
 
-## Challenge 13: Create a distributed database system
+### References
+
+## Challenge 13: Rolling update (1pts)
+* Update the version number in each of the HTML page of the respective website (webdb and webnodb) and rebuild their repective docker container (and bump up their version humber)
+* Deploy your new container as a rolling update 
+
+### Reference 
+* [Performing a Rolling Update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/)
+
+## Challenge 14: Create a distributed database system (1pts)
 * Create a master-slave architecture with mongodb
-* don't use already made Helm chart to achive this challenge
+* Don't use already made Helm chart to achive this challenge
 
 ### References
 * [Replication Introduction](https://www.mongodb.com/docs/v2.4/core/replication-introduction/)
@@ -273,7 +281,7 @@ Now should be able to access to the **webnodb** web page at the following url:
 * [Kubernetes StatefulSet explained](https://youtu.be/pPQKAR1pA9U?si=pjmaqy5EvE3P4W2c)
 * [Statefulsets | Deploying MongoDB clusters to Kubernetes](https://youtu.be/eUa-IDPGL-Q?si=wcZc2AVhYXit0OSD)
 
-## Challenge 14: Create a Network policies 
+## Challenge 15: Create a Network policies 
 * Create a Network policy that restrict access to the database only to IP address corresponding to your Web Pods 
 * Test your network policy 
 
@@ -281,4 +289,4 @@ Now should be able to access to the **webnodb** web page at the following url:
 * [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 
 
-## Challenge 14: Deploy with HELM a service of your choice 
+## Challenge 16: Deploy with HELM a service of your choice 
