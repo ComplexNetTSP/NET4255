@@ -273,7 +273,7 @@ Now should be able to access to the **webnodb** web page at the following url `h
 
 ## Challenge 14: Liveness Probes (1pts)
 
-## Challenge 14: Create a distributed database system (1pts)
+## Challenge 15: Create a distributed database system (1pts)
 * Create a master-slave architecture with mongodb
 * Don't use already made Helm chart to achive this challenge
 
@@ -283,7 +283,7 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * [Kubernetes StatefulSet explained](https://youtu.be/pPQKAR1pA9U?si=pjmaqy5EvE3P4W2c)
 * [Statefulsets | Deploying MongoDB clusters to Kubernetes](https://youtu.be/eUa-IDPGL-Q?si=wcZc2AVhYXit0OSD)
 
-## Challenge 15: Create a Network policies 
+## Challenge 16: Create a Network policies 
 * Create a Network policy that restrict access to the database only to IP address corresponding to your Web Pods 
 * Test your network policy 
 
@@ -291,4 +291,4 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 
 
-## Challenge 16: Deploy with HELM a service of your choice 
+## Challenge 17: Deploy with HELM a service of your choice 
