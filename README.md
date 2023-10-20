@@ -271,6 +271,8 @@ Now should be able to access to the **webnodb** web page at the following url `h
 ### Reference 
 * [Performing a Rolling Update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/)
 
+## Challenge 14: Liveness Probes (1pts)
+
 ## Challenge 14: Create a distributed database system (1pts)
 * Create a master-slave architecture with mongodb
 * Don't use already made Helm chart to achive this challenge
