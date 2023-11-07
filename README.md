@@ -107,12 +107,12 @@ $ gcloud auth login
 
 * Select net4251 as the default project 
 ```bash
-$ gcloud config set project net-4251 
+$ gcloud config set project net-4255 
 ```
 * Install the kubeconfig file on your computer
 
 ```bash
-$ gcloud container clusters get-credentials net4251-kube-cluster --region=us-central1
+$ gcloud container clusters get-credentials net4255-gke --region=us-central1
 ```
 
 After this command you should have kubeconfig.yml file on your laptop. This file will enable you to get access to the kubernetes cluster.
