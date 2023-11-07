@@ -95,7 +95,7 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
 * [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/)
 
 ## Challenge 5: Learn Kubernetes with the online tutorial (1pts)
-* Ask the professor to get access to the Kubernetes server: register your Telecom SudParis email (firstname.lastname@telecom-sudparis.eu) as a valid google address or provide valid gmail address.
+* Ask the professor to get access to the Kubernetes server: register your Telecom SudParis email (firstname.lastname@telecom-sudparis.eu) as a valid google address or provide valid gmail address (name@gmail.com).
 * Install [gcloud cli](https://cloud.google.com/sdk/docs/install?hl=fr#linux)
 * Install [kubectl](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl?hl=fr#gcloud)
 * you should have access to the cluster dashboard at the following address: [https://console.cloud.google.com/kubernetes](https://console.cloud.google.com/kubernetes)
