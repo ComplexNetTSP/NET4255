@@ -129,7 +129,7 @@ $ gcloud auth login
 ...
 ```
 
-* Select net4251 as the default project 
+* Select net-4255 as the default project 
 ```bash
 $ gcloud config set project net-4255 
 ```
