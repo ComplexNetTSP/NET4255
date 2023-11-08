@@ -33,10 +33,32 @@ On your own computer install the following software:
 * Draw a schema of your systems (ex. [draw.io](https://app.diagrams.net))
   * Show the system
   * Show the container IP address
-  * Show the container ports 
+  * Show the container ports
+ 
+### Notes about Flask
+Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions. However, Flask supports extensions that can add application features as if they were implemented in Flask itself. 
+
+A minimal Flask application looks something like this:
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+```
+
+Now you can run the web serveur you just created
+
+```bash
+$ flask --app hello run
+```
+
+see the [quickstart guide](https://flask.palletsprojects.com/en/3.0.x/quickstart/) for more information
 
 ### References 
-* [Getting started with Flask](https://flask.palletsprojects.com/en/2.2.x/quickstart/)
+* [Getting started with Flask](https://fflask.palletsprojects.com/en/3.0.x/quickstart/)
 * [Containerize application](https://docs.docker.com/get-started/02_our_app/)
 
 ## Challenge 2: Create docker compose to deploy a mongodb database server (2pts)
