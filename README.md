@@ -53,6 +53,8 @@ Now you can run the web serveur you just created
 
 ```bash
 $ flask --app hello run
+* Serving Flask app 'hello'
+* Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
 ```
 
 see the [quickstart guide](https://flask.palletsprojects.com/en/3.0.x/quickstart/) for more information
