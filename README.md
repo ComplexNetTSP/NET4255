@@ -58,7 +58,7 @@ $ flask --app hello run
 * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
 ```
 
-see the [quickstart guide](https://flask.palletsprojects.com/en/3.0.x/quickstart/) for more information
+See the [quickstart guide](https://flask.palletsprojects.com/en/3.0.x/quickstart/) for more information
 
 ### References 
 * [Getting started with Flask](https://fflask.palletsprojects.com/en/3.0.x/quickstart/)
@@ -89,11 +89,12 @@ MongoDB is a database based on nosql. It's easier to create a master/slave datab
     * The IP address of the client
     * The current date
 * Your flask application should display the last 10 records of the database
-* Update Fask app version displayed on the page to V2
+* Update Flask app version displayed on the page to V2
 * Finaly deploy your services using a docker compose file with the following elements:
   * Docker service for your website (your flask application)
   * Docker service for your mongodb database
   * Network to connect the previous services
+* Send your docker container on [DockerHub](https://hub.docker.com/}) with the correct tags.
 * Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net))
   * Show the system
   * Show the container IP address
@@ -126,8 +127,8 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
 * Ask the professor to get access to the Kubernetes server: register your Telecom SudParis email (firstname.lastname@telecom-sudparis.eu) as a valid google address or provide valid gmail address (name@gmail.com).
 * Install [gcloud cli](https://cloud.google.com/sdk/docs/install?hl=fr#linux)
 * Install [kubectl](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl?hl=fr#gcloud)
-* you should have access to the cluster dashboard at the following address: [https://console.cloud.google.com/kubernetes](https://console.cloud.google.com/kubernetes)
-* login with gcloud 
+* You should have access to the cluster dashboard at the following address: [https://console.cloud.google.com/kubernetes](https://console.cloud.google.com/kubernetes)
+* Login with gcloud 
 ```bash
 $ gcloud auth login 
 ...
