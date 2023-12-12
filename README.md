@@ -76,7 +76,7 @@ see the [quickstart guide](https://flask.palletsprojects.com/en/3.0.x/quickstart
 ### Why mongodb ?
 MongoDB is a database based on nosql. It's easier to create a master/slave database cluster when using nosql. 
 
-## Challenge 3: Create docker compose file to deploy a simple web service (flask + mongodb) (3pts) 
+## Challenge 3: Create docker compose file to deploy a simple web service (flask + mongodb) (2pts) 
 * Update your Flask application and add the following items:
   * Your name
   * Your project name
@@ -104,7 +104,7 @@ MongoDB is a database based on nosql. It's easier to create a master/slave datab
 * [Configure the default network](https://docs.docker.com/compose/networking/)
 * [How to get the last N records in mongodb?](https://stackoverflow.com/questions/4421207/how-to-get-the-last-n-records-in-mongodb)
 
-## Challenge 4: Install a load balancer for your infrastructure (2pts)
+## Challenge 4: Install a load balancer for your infrastructure (1pts)
 
 Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/) load balancer to your Docker compose file. Update your docker compose file with the following elements:
 * 2 Flask application
@@ -314,7 +314,7 @@ Now should be able to access to the **webnodb** web page at the following url `h
 ### References 
 * [Configure Liveness Probes in Kubernetes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
 
-## Challenge 15: Create a distributed database system (I) (1pts)
+## Challenge 15: Create a distributed database system (I) (2pts)
 * Create a master-slave architecture with mongodb
 * Don't use already made Helm chart to achive this challenge
 * Manualy configure each instance of the mongodb database to be part of a Replica Set (meaning that a given master database is replicated to all the slaves in the cluster) 
