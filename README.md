@@ -321,6 +321,9 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * Create a Network policy that restrict access to the database only to IP address corresponding to your Web Pods 
 * Test your network policy 
 
+### References 
+* [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
+
 ## Challenge 16: Create a distributed database system (I) (2pts)
 * Create a master-slave architecture with mongodb
 * Don't use already made Helm chart to achive this challenge
@@ -331,9 +334,6 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * [Deploy a Replica Set](https://www.mongodb.com/docs/v2.4/tutorial/deploy-replica-set/)
 * [Kubernetes StatefulSet explained](https://youtu.be/pPQKAR1pA9U?si=pjmaqy5EvE3P4W2c)
 * [Statefulsets | Deploying MongoDB clusters to Kubernetes](https://youtu.be/eUa-IDPGL-Q?si=wcZc2AVhYXit0OSD)
-
-### References 
-* [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 
 ## Challenge 17: Create a distributed database system (II) (1pts)
 * Create a Helm Chart that deploy a master-slave architecture with mongodb 
