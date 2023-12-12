@@ -23,11 +23,11 @@ On your own computer install the following software:
 ## Challenge 1: Create a Simple Web page and develop a docker file for your website (2 pts)
 
 * Build a one page Flask application which contains the following elements:
-  * your name
-  * your project name
-  * version of your website (i.e. V1)
-  * the server hostname
-  * the current date
+  * Your name
+  * Your project name
+  * Version of your website (i.e. V1)
+  * The server hostname
+  * The current date
 * Build a docker container which contains your Flask web page
 * Test your application
 * Send your docker container on [DockerHub](https://hub.docker.com/})
@@ -73,19 +73,22 @@ see the [quickstart guide](https://flask.palletsprojects.com/en/3.0.x/quickstart
   * Show the containers IP address or hostname
   * Show the container ports 
 
+### Why mongodb ?
+MongoDB is a database based on nosql. It's easier to create a master/slave database cluster when using nosql. 
+
 ## Challenge 3: Create docker compose file to deploy a simple web service (flask + mongodb) (3pts) 
 * Update your Flask application and add the following items:
-  * your name
-  * your project name
-  * version of your website (i.e. V1)
-  * the server hostname
-  * the current date
+  * Your name
+  * Your project name
+  * Version of your website (i.e. V1)
+  * The server hostname
+  * The current date
 * Flask application should connect to a mongodb database each time a request is served :
   * It connects to the mongodb database through [pymongo](https://pymongo.readthedocs.io/en/stable/)
   * For each request, it will record in the mongodb database:
-    * the IP address of the client
-    * the current date
-* your flask application should display the last 10 records of the database
+    * The IP address of the client
+    * The current date
+* Your flask application should display the last 10 records of the database
 * Update Fask app version displayed on the page to V2
 * Finaly deploy your services using a docker compose file with the following elements:
   * Docker service for your website (your flask application)
@@ -108,7 +111,7 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
   * Deploy 1 Flask app without database connections
   * Deploy 1 Flask app with database connections
 * 1 NGINX load balancer which load balance the load between the two web server
-* 1 mongodb database
+* 1 Mongodb database
 * Network
 * Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net))
   * Show the system
@@ -171,8 +174,8 @@ $ kubectl get namespace
 ## Challenge 6: Lauch your first Pod in command line (1pts)
 Create your first deployment in command line with the **kubectl** command: 
 * Create a deployment for the webnodb container in your own namespace
-   * without any replicat
-   * without **any service**
+   * Without any replicat
+   * Without **any service**
 * Check that your deployment is successful in the [google cloud console](https://console.cloud.google.com/kubernetes/) and with the command line: 
 ```bash 
 $ kubectl get deployments -o wide
@@ -266,6 +269,9 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * Create a HELM Chart to deploy the whole infrastructure 
 * Use ConfigMaps to store database hostname and port information
 * Use Secrets to store the database credentials
+
+### References
+* [Helm chart](https://helm.sh/docs/topics/charts/)
 
 ## Challenge 11: Update the mongodb database Deployment with a StatfulSet (1pts)
 * Instead of a traditional deployment use a StafulSet to deploy your mongodb database 
