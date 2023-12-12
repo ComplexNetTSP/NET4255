@@ -5,7 +5,8 @@
 
 <h1 align="center">NET 4255: High Availability Web Services</h1>
 
-### Teacher: [Vincent Gauthier](mailto:vincent.gauthier@telecom-sudparis.eu), [Hossam Afifi](mailto:hossam.afifi@telecom-sudparis.eu) 
+### Teacher: [Vincent Gauthier](mailto:vincent.gauthier@telecom-sudparis.eu)
+### Assistant: [Gatien Roujanski](mailto:gatien.roujanski@telecom-sudparis.eu) 
 
 ## Introduction
 * Clone this repository
@@ -33,10 +34,34 @@ On your own computer install the following software:
 * Draw a schema of your systems (ex. [draw.io](https://app.diagrams.net))
   * Show the system
   * Show the container IP address
-  * Show the container ports 
+  * Show the container ports
+ 
+### Notes about Flask
+Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions. However, Flask supports extensions that can add application features as if they were implemented in Flask itself. 
+
+A minimal Flask application looks something like this:
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+```
+
+Now you can run the web serveur you just created
+
+```bash
+$ flask --app hello run
+* Serving Flask app 'hello'
+* Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+```
+
+see the [quickstart guide](https://flask.palletsprojects.com/en/3.0.x/quickstart/) for more information
 
 ### References 
-* [Getting started with Flask](https://flask.palletsprojects.com/en/2.2.x/quickstart/)
+* [Getting started with Flask](https://fflask.palletsprojects.com/en/3.0.x/quickstart/)
 * [Containerize application](https://docs.docker.com/get-started/02_our_app/)
 
 ## Challenge 2: Create docker compose to deploy a mongodb database server (2pts)
@@ -95,7 +120,7 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
 * [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/)
 
 ## Challenge 5: Learn Kubernetes with the online tutorial (1pts)
-* Ask the professor to get access to the Kubernetes server: register your Telecom SudParis email (firstname.lastname@telecom-sudparis.eu) as a valid google address or provide valid gmail address.
+* Ask the professor to get access to the Kubernetes server: register your Telecom SudParis email (firstname.lastname@telecom-sudparis.eu) as a valid google address or provide valid gmail address (name@gmail.com).
 * Install [gcloud cli](https://cloud.google.com/sdk/docs/install?hl=fr#linux)
 * Install [kubectl](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl?hl=fr#gcloud)
 * you should have access to the cluster dashboard at the following address: [https://console.cloud.google.com/kubernetes](https://console.cloud.google.com/kubernetes)
@@ -105,14 +130,14 @@ $ gcloud auth login
 ...
 ```
 
-* Select net4251 as the default project 
+* Select net-4255 as the default project 
 ```bash
-$ gcloud config set project net-4251 
+$ gcloud config set project net-4255 
 ```
 * Install the kubeconfig file on your computer
 
 ```bash
-$ gcloud container clusters get-credentials net4251-kube-cluster --region=us-central1
+$ gcloud container clusters get-credentials net4255-gke --location=us-central1-a
 ```
 
 After this command you should have kubeconfig.yml file on your laptop. This file will enable you to get access to the kubernetes cluster.
@@ -273,7 +298,9 @@ Now should be able to access to the **webnodb** web page at the following url `h
 ### Reference 
 * [Performing a Rolling Update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/)
 
-## Challenge 14: Create a distributed database system (1pts)
+## Challenge 14: Liveness Probes (1pts)
+
+## Challenge 15: Create a distributed database system (1pts)
 * Create a master-slave architecture with mongodb
 * Don't use already made Helm chart to achive this challenge
 
@@ -283,7 +310,7 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * [Kubernetes StatefulSet explained](https://youtu.be/pPQKAR1pA9U?si=pjmaqy5EvE3P4W2c)
 * [Statefulsets | Deploying MongoDB clusters to Kubernetes](https://youtu.be/eUa-IDPGL-Q?si=wcZc2AVhYXit0OSD)
 
-## Challenge 15: Create a Network policies 
+## Challenge 16: Create a Network policies 
 * Create a Network policy that restrict access to the database only to IP address corresponding to your Web Pods 
 * Test your network policy 
 
@@ -291,4 +318,4 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 
 
-## Challenge 16: Deploy with HELM a service of your choice 
+## Challenge 17: Deploy with HELM a service of your choice 
