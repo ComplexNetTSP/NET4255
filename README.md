@@ -5,7 +5,8 @@
 
 <h1 align="center">NET 4255: High Availability Web Services</h1>
 
-### Teacher: [Vincent Gauthier](mailto:vincent.gauthier@telecom-sudparis.eu), [Hossam Afifi](mailto:hossam.afifi@telecom-sudparis.eu) 
+### Teacher: [Vincent Gauthier](mailto:vincent.gauthier@telecom-sudparis.eu)
+### Assistant [Gatien Roujanski](mailto:gatien.roujanski@telecom-sudparis.eu) 
 
 ## Introduction
 * Clone this repository
