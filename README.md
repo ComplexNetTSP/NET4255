@@ -268,7 +268,11 @@ Now should be able to access to the **webnodb** web page at the following url `h
 ## Challenge 10: Automate your deployment with HELM (1pts)
 * Create a HELM Chart to deploy the whole infrastructure 
 * Use ConfigMaps to store database hostname and port information
-* Use Secrets to store the database credentials
+* Use Hooks to configure your ConfigMaps before and after the deployment of your helm chart
+
+### References
+* [Use ConfigMap in Kubernetes](https://kubernetes.io/docs/concepts/configuration/configmap/)
+* [Helm Chart Hooks](https://www.golinuxcloud.com/kubernetes-helm-hooks-examples/)
 
 ## Challenge 11: Update the mongodb database Deployment with a StatefulSet (1pts)
 * Instead of a traditional deployment use a StafulSet to deploy your mongodb database 
