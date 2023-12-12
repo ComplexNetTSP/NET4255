@@ -71,7 +71,10 @@ See the [quickstart guide](https://flask.palletsprojects.com/en/3.0.x/quickstart
 * Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net))
   * Show the system
   * Show the containers IP address or hostname
-  * Show the container ports 
+  * Show the container ports
+ 
+### References 
+* [Docker compose gettig started](https://docs.docker.com/compose/gettingstarted/)
 
 ### Why mongodb ?
 MongoDB is a database based on nosql. It's easier to create a master/slave database cluster when using nosql. 
@@ -111,7 +114,7 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
 * 2 Flask application
   * Deploy 1 Flask app without database connections
   * Deploy 1 Flask app with database connections
-* 1 NGINX load balancer which load balance the load between the two web server
+* 1 NGINX load balancer which balances the load between the two web server
 * 1 Mongodb database
 * Network
 * Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net))
@@ -172,7 +175,7 @@ $ kubectl get namespace
 ### References
 * [Kubernetes Tutorial](https://kubernetes.io/docs/tutorials/)
   
-## Challenge 6: Lauch your first Pod in command line (1pts)
+## Challenge 6: Launch your first Pod in command line (1pts)
 Create your first deployment in command line with the **kubectl** command: 
 * Create a deployment for the webnodb container in your own namespace
    * Without any replicat
@@ -197,9 +200,9 @@ Now you can connect with your browser to `http://127.0.0.1:54127` to access the 
 * [Deploying your first app on Kubernetes](https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-intro/)
 * [Utiliser le Port Forwarding pour accéder à des applications dans un cluster](https://kubernetes.io/fr/docs/tasks/access-application-cluster/port-forward-access-application-cluster/)
 
-## Challenge 7: Create your first deployment file with a NodePort service (1pts)
+## Challenge 7: Create your first deployment file with a ClusterIP service (1pts)
 * Create a Deployment file for your container webnodb (**the one without database**)
-* Becareful, create your **Deployment** and **the NodePort service** in your on namespace !!!!
+* Be careful, create your **Deployment** and **the ClusterIP service** in your on namespace !!!!
 * Show on a new schema how a request is served from the service to the pods:
   * The schema should explain which port is used at each step and what IP address is used by each component (nodes, pods, services)
 * Request the following resources per pod:
@@ -231,7 +234,7 @@ Now should be able to access to the **webnodb** web page at the following url `h
 
 * Deploy the webdb web service with 3 replica and its related service (**NodePort**)
 * Deploy the mongodb database and its related service (**ClusterIP**)
-* Connect the web service to teh database using kubernetes DNS hostname
+* Connect the web service to the database using kubernetes DNS hostname
 * Explain the difference between a NodePort Service and a ClusterIP service
 * Validate your deployment (webdb, mongodb) by using port-forwarding
 * Request the following resources per pod:
@@ -269,21 +272,20 @@ Now should be able to access to the **webnodb** web page at the following url `h
 ## Challenge 10: Automate your deployment with HELM (1pts)
 * Create a HELM Chart to deploy the whole infrastructure 
 * Use ConfigMaps to store database hostname and port information
-* Use Hooks to configure your ConfigMaps before and after the deployment of your helm chart
 
 ### References
 * [Use ConfigMap in Kubernetes](https://kubernetes.io/docs/concepts/configuration/configmap/)
-* [Helm Chart Hooks](https://www.golinuxcloud.com/kubernetes-helm-hooks-examples/)
 
 ## Challenge 11: Update the mongodb database Deployment with a StatefulSet (1pts)
 * Instead of a traditional deployment use a StafulSet to deploy your mongodb database 
-* Use a Persistant Volume to store the database content 
+* Use a Persistant Volume to store the database content
+    *  Stockage ressource : 0.1 Go
 * Update the previous mongodb service with a headless service
 * There should be only one replicat for the mongodb database
 * Explain what is a StatefulSet and in which case it is usefull
 * Explain what is a headless service, how pods are named with headless service
 * Update your previous Helm chart accordinly 
-* Your first database in the statefulSet (example: mongo-0) should have a valid DNS hostname 
+* Your first database in the statefulSet (example: mongo-0) should have a valid DNS hostname
 
 ### References
 * [Kubernetes StatefulSet simply explained](https://youtu.be/pPQKAR1pA9U?si=as0jDo02sCPmBR43)
@@ -293,19 +295,19 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * [GKE Volumes persistants et provisionnement dynamique](https://kubernetes.io/fr/docs/concepts/storage/persistent-volumes/)
 * [How to set pvc with statefulset in kubernetes?](https://stackoverflow.com/questions/65266223/how-to-set-pvc-with-statefulset-in-kubernetes)
 
-## Challenge 12: Automatic scaling (1pts)
-* Create a deployment that spin a new pod when the CPU utilization of a pod cross a certain threasold (e.g.: 60% Utilization)
-* Limit to maximum number of pods to be deploy to 10 pods
-
-### References
-* [Horizontal Scaling with Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
-
-## Challenge 13: Rolling update (1pts)
+## Challenge 12: Rolling update (1pts)
 * Update the version number in each of the HTML page of the respective website (webdb and webnodb) and rebuild their repective docker container (and bump up their version humber)
 * Deploy your new container as a rolling update 
 
 ### References 
 * [Performing a Rolling Update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/)
+
+## Challenge 13: Automatic scaling (1pts)
+* Create a deployment that spin a new pod when the CPU utilization of a pod cross a certain threasold (e.g.: 60% Utilization)
+* Limit to maximum number of pods to be deploy to 10 pods
+
+### References
+* [Horizontal Scaling with Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
 
 ## Challenge 14: Liveness Probes (1pts)
 * Define **Liveness Probe** for each container in your Chart
@@ -315,7 +317,11 @@ Now should be able to access to the **webnodb** web page at the following url `h
 ### References 
 * [Configure Liveness Probes in Kubernetes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
 
-## Challenge 15: Create a distributed database system (I) (2pts)
+## Challenge 15: Create a Network policies (1pts)
+* Create a Network policy that restrict access to the database only to IP address corresponding to your Web Pods 
+* Test your network policy 
+
+## Challenge 16: Create a distributed database system (I) (2pts)
 * Create a master-slave architecture with mongodb
 * Don't use already made Helm chart to achive this challenge
 * Manualy configure each instance of the mongodb database to be part of a Replica Set (meaning that a given master database is replicated to all the slaves in the cluster) 
@@ -326,19 +332,22 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * [Kubernetes StatefulSet explained](https://youtu.be/pPQKAR1pA9U?si=pjmaqy5EvE3P4W2c)
 * [Statefulsets | Deploying MongoDB clusters to Kubernetes](https://youtu.be/eUa-IDPGL-Q?si=wcZc2AVhYXit0OSD)
 
-## Challenge 16: Create a Network policies (1pts)
-* Create a Network policy that restrict access to the database only to IP address corresponding to your Web Pods 
-* Test your network policy 
-
 ### References 
 * [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 
 ## Challenge 17: Create a distributed database system (II) (1pts)
 * Create a Helm Chart that deploy a master-slave architecture with mongodb 
 
-## Challenge 18: Deploy a Redis cache in your infrastructure
+## Challenge 18: Deploy a Redis cache in your infrastructure (1pts)
 * Explain what is the advantage of updating your infrastructure with a redis cache ?
-* Define your new infrastructure 
+* Define your new infrastructure
 
 ### References 
 * [Redis Cache](https://www.geeksforgeeks.org/redis-cache/)
+
+## Challenge 19: Implement Hooks on Helm
+* Use Hooks to configure your ConfigMaps before and after the deployment of your helm chart
+* (Optional) Use hooks to save your database before updating helm chart
+
+### References 
+* [Helm Chart Hooks](https://www.golinuxcloud.com/kubernetes-helm-hooks-examples/)
