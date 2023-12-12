@@ -242,7 +242,7 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * Use ConfigMaps to store database hostname and port information
 * Use Secrets to store the database credentials
 
-## Challenge 11: Update the mongodb database Deployment with a StatfulSet (1pts)
+## Challenge 11: Update the mongodb database Deployment with a StatefulSet (1pts)
 * Instead of a traditional deployment use a StafulSet to deploy your mongodb database 
 * Use a Persistant Volume to store the database content 
 * Update the previous mongodb service with a headless service
@@ -261,6 +261,8 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * [How to set pvc with statefulset in kubernetes?](https://stackoverflow.com/questions/65266223/how-to-set-pvc-with-statefulset-in-kubernetes)
 
 ## Challenge 12: Scaling deployment (1pts)
+* Create a deployment that spin num pod when the threadhold of xxx is cross 
+* Limit to maximum number of pods to 10
 
 ### References
 
