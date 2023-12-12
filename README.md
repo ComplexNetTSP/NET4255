@@ -265,7 +265,7 @@ Now should be able to access to the **webnodb** web page at the following url `h
 ## Challenge 10: Automate your deployment with HELM (1pts)
 * Create a HELM Chart to deploy the whole infrastructure 
 * Use ConfigMaps to store database hostname and port information
-* Use Secrets to store the database credentials
+* Use Hooks to deploy your ConfigMaps before the container deployment 
 
 ## Challenge 11: Update the mongodb database Deployment with a StatefulSet (1pts)
 * Instead of a traditional deployment use a StafulSet to deploy your mongodb database 
@@ -285,24 +285,32 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * [GKE Volumes persistants et provisionnement dynamique](https://kubernetes.io/fr/docs/concepts/storage/persistent-volumes/)
 * [How to set pvc with statefulset in kubernetes?](https://stackoverflow.com/questions/65266223/how-to-set-pvc-with-statefulset-in-kubernetes)
 
-## Challenge 12: Scaling deployment (1pts)
-* Create a deployment that spin num pod when the threadhold of xxx is cross 
-* Limit to maximum number of pods to 10
+## Challenge 12: Automatic scaling (1pts)
+* Create a deployment that spin a new pod when the CPU utilization of a pod cross a certain threasold (e.g.: 60% Utilization)
+* Limit to maximum number of pods to be deploy to 10 pods
 
 ### References
+* [Horizontal Scaling with Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
 
 ## Challenge 13: Rolling update (1pts)
 * Update the version number in each of the HTML page of the respective website (webdb and webnodb) and rebuild their repective docker container (and bump up their version humber)
 * Deploy your new container as a rolling update 
 
-### Reference 
+### References 
 * [Performing a Rolling Update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/)
 
 ## Challenge 14: Liveness Probes (1pts)
+* Define **Liveness Probe** for each container in your Chart
+* Becareful each application might need a specific type of probe 
+* Explain you choose a spefic type of probe for a given application
 
-## Challenge 15: Create a distributed database system (1pts)
+### References 
+* [Configure Liveness Probes in Kubernetes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
+
+## Challenge 15: Create a distributed database system (I) (1pts)
 * Create a master-slave architecture with mongodb
 * Don't use already made Helm chart to achive this challenge
+* Manualy configure each instance of the mongodb database to be part of a Replica Set (meaning that a given master database is replicated to all the slaves in the cluster) 
 
 ### References
 * [Replication Introduction](https://www.mongodb.com/docs/v2.4/core/replication-introduction/)
@@ -310,12 +318,19 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * [Kubernetes StatefulSet explained](https://youtu.be/pPQKAR1pA9U?si=pjmaqy5EvE3P4W2c)
 * [Statefulsets | Deploying MongoDB clusters to Kubernetes](https://youtu.be/eUa-IDPGL-Q?si=wcZc2AVhYXit0OSD)
 
-## Challenge 16: Create a Network policies 
+## Challenge 16: Create a Network policies (1pts)
 * Create a Network policy that restrict access to the database only to IP address corresponding to your Web Pods 
 * Test your network policy 
 
 ### References 
 * [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 
+## Challenge 17: Create a distributed database system (II) (1pts)
+* Create a Helm Chart that deploy a master-slave architecture with mongodb 
 
-## Challenge 17: Deploy with HELM a service of your choice 
+## Challenge 18: Deploy a Redis cache in your infrastructure
+* Explain what is the advantage of updating your infrastructure with a redis cache ?
+* Define your new infrastructure 
+
+### References 
+* [Redis Cache](https://www.geeksforgeeks.org/redis-cache/)
