@@ -77,7 +77,7 @@ See the [quickstart guide](https://flask.palletsprojects.com/en/3.0.x/quickstart
 * [Docker compose gettig started](https://docs.docker.com/compose/gettingstarted/)
 
 ### Why mongodb ?
-MongoDB is a database based on nosql. It's easier to create a master/slave database cluster when using nosql. 
+MongoDB is classified as a NoSQL database program, MongoDB uses JSON-like documents. MongoDB provides high availability with replica sets. A replica set consists of two or more copies of the data. Each replica-set member may act in the role of primary or secondary replica at any time. All writes and reads are done on the primary replica by default. Secondary replicas maintain a copy of the data of the primary using built-in replication. When a primary replica fails, the replica set automatically conducts an election process to determine which secondary should become the primary. Secondaries can optionally serve read operations, but that data is only eventually consistent by default. It's easier to create a master/slave database cluster when using nosql. 
 
 ## Challenge 3: Create docker compose file to deploy a simple web service (flask + mongodb) (2pts) 
 * Update your Flask application and add the following items:
