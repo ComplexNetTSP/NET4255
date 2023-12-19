@@ -63,6 +63,7 @@ See the [quickstart guide](https://flask.palletsprojects.com/en/3.0.x/quickstart
 ### References 
 * [Getting started with Flask](https://fflask.palletsprojects.com/en/3.0.x/quickstart/)
 * [Containerize an application](https://docs.docker.com/get-started/02_our_app/)
+* [Christian Lempa - Learning Docker // Build Container Images](https://youtu.be/JDw3ZdQcv2g?si=ZkA7qXYBYNrPpvlW)
 
 ## Challenge 2: Create docker compose to deploy a mongodb database server (2pts)
 * Find a already made [mongodb](https://www.mongodb.com/) docker container (for instance the [mongodb community server](https://hub.docker.com/r/mongodb/mongodb-community-server))
