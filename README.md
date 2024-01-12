@@ -66,7 +66,7 @@ See the [quickstart guide](https://flask.palletsprojects.com/en/3.0.x/quickstart
 * [Christian Lempa - Learning Docker // Build Container Images](https://youtu.be/JDw3ZdQcv2g?si=ZkA7qXYBYNrPpvlW)
 
 ## Challenge 2: Create docker compose to deploy a mongodb database server (2pts)
-* Find a already made [mongodb](https://www.mongodb.com/) docker container (for instance the [mongodb community server](https://hub.docker.com/r/mongodb/mongodb-community-server))
+* Find a already made [mongodb](https://www.mongodb.com/) docker container (for instance the [official mongodb docker image](https://hub.docker.com/_/mongo/tags?page=88))
 * Use docker compose to deploy your mongodb database
 * Test your application and add record in your database manually with the mongod command ([see the install requirement for mongodb](https://www.mongodb.com/docs/v3.0/tutorial/install-mongodb-on-windows/)
 * Update the schema of your infrastructure (ex. [draw.io](https://app.diagrams.net))
