@@ -311,9 +311,11 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * [Horizontal Scaling with Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
 
 ## Challenge 14: Liveness Probes (1pts)
-* Define **Liveness Probe** for each container in your Chart
-* Becareful each application might need a specific type of probe 
-* Explain you choose a spefic type of probe for a given application
+* Define the **Liveness Probe** for each container in your chart.
+* Note that each application may require a specific type of probe. 
+* Explain why you have chosen a particular type of probe for a particular application.
+    * What is your liveness probing strategy for the webserver ?
+    * What is your liveness probing strategy for the database ?
 
 ### References 
 * [Configure Liveness Probes in Kubernetes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
