@@ -340,9 +340,11 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * Create a Helm Chart that deploy a master-slave architecture with mongodb 
 
 ## Challenge 18: Deploy a Redis cache in your infrastructure (1pts)
-* Updates your webpage (with db and no db) in order to display a counter that show the numlber of visit in both website
-* Explain what is the advantage of using a redis cache in this case ?
-* Define your new infrastructure
+* Update your site (with and without db) to display a counter showing the number of visits.
+    * Your webpage should display the current number of visits and remain consistent across replicas.
+    * Each time a page is loaded, you should increment the number of visits to that page. 
+* Explain the advantage of using a redis cache in this case.
+* Update the drawing of your new infrastructure (services, etc)
 
 ### References 
 * [Redis Cache](https://www.geeksforgeeks.org/redis-cache/)
