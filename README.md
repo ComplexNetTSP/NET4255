@@ -6,7 +6,7 @@
 <h1 align="center">NET 4255: High Availability Web Services</h1>
 
 ### Teacher: [Vincent Gauthier](mailto:vincent.gauthier@telecom-sudparis.eu)
-### Assistant: [Gatien Roujanski](mailto:gatien.roujanski@telecom-sudparis.eu) 
+### Assistant: [Timothée Mathubert](mailto:timothee.mathubert@telecom-sudparis.eu) 
 
 ## Introduction
 * Clone this repository
@@ -14,10 +14,32 @@
 * Before starting a given step, present the sketch of your infrastructure to a professor.
 * We strongly recommend that you use [Alpine OS](https://www.alpinelinux.org/) as the base operating system for your [docker image](https://www.docker.com/blog/how-to-use-the-alpine-docker-official-image/). 
 
-## Challenge 0: Install 
+## Challenge 0: Install
 On your own computer install the following software:
 * [Docker Desktop](https://docs.docker.com/get-docker/)
-* [Conda](https://www.anaconda.com/download)
+* [Conda](https://www.anaconda.com/download) installation steps:
+    * Run the following commands:
+    ```bash
+    mkdir -p ~/miniconda3
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+    bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+    rm ~/miniconda3/miniconda.sh
+    source ~/miniconda3/bin/activate
+    conda init --all
+    ```
+    * Create & enter your virtual python environment:
+    ```bash
+    conda create -n [env-name]
+    conda activate [env-name]
+    ```
+    * Install pip in your env:
+    ```bash
+    conda install pip
+    ```
+    * Install packages inside your python virtual environnement using pip:
+    ```bash
+    pip install [package1] [package2] ...
+    ```
 * IDE ([VSCode](https://code.visualstudio.com/), etc)
 
 ## Challenge 1: Create a Simple Web page and develop a docker file for your website (2 pts)
