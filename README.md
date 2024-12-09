@@ -150,50 +150,33 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
 * [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/)
 
 ## Challenge 5: Learn Kubernetes with the online tutorial (1pts)
-* Ask the professor to get access to the Kubernetes server: register your Telecom SudParis email (firstname.lastname@telecom-sudparis.eu) as a valid google address or provide valid gmail address (name@gmail.com).
-* Install [gcloud cli](https://cloud.google.com/sdk/docs/install?hl=fr#linux)
-* Install [kubectl](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl?hl=fr#gcloud)
-* You should have access to the cluster dashboard at the following address: [https://console.cloud.google.com/kubernetes](https://console.cloud.google.com/kubernetes)
-* Login with gcloud 
-```bash
-$ gcloud auth login 
-...
-```
-
-* Select net-4255 as the default project 
-```bash
-$ gcloud config set project net-4255 
-```
-* Install the kubeconfig file on your computer
-
-```bash
-$ gcloud container clusters get-credentials net4255-gke --location=us-central1-a --project=net-4255-404310
-```
-
-After this command you should have kubeconfig.yml file on your laptop. This file will enable you to get access to the kubernetes cluster.
-
-```bash
-$ ls $HOME/.kube/
-kubeconfig.yml
-```
-
-Export kubeconfig file  
-```bash
-$ export KUBECONFIG=$HOME/.kube/kubeconfig.yml
-```
-
-Now, you should be able to connect to the kuberntest cluster. Check the following command in order to check the connection. 
+* Ask the professor to get access to the Kubernetes cluster.
+* Install [kubectl](https://kubernetes.io/fr/docs/tasks/tools/install-kubectl/)
+* Use the provided credentials to connect in the [Rancher Web interface](https://net4255.luxbulb.org). You have access to the cluster dashboard at the same address.
+* Install the kubeconfig file on your computer:
+    * In Rancher web interface: go to "Cluster Management".
+    * Click on the "net4255" cluster, then on "Download KubeConfig".
+    * After this step you should have `net4255.yml` file on your laptop, inside your Downloads folder. This file will enable you to get access to the kubernetes cluster.
+    * Move the `net4255.yml` file to `~/.kube:
+    ```bash
+    mkdir ~/.kube
+    mv ~/Downloads/net4255.yaml ~/.kube
+    ```
+    * Export the kubeconfig file
+    ```bash
+    $ export KUBECONFIG=$HOME/.kube/kubeconfig.yml
+    ```
+* Now, you should be able to connect to the Kubernetes cluster. Check the following command in order to check the connection. 
 ```bash
 $ kubectl cluster-info
 ...
 ```
-
-You should see a namespace with your name !!! with the following command:
+* You should see a namespace with your name !!! with the following command:
 ```bash
 $ kubectl get namespace
 ```
 
-* Follow the [Kubernetes Tutorial](https://kubernetes.io/docs/tutorials/)
+* Now that you are set up, follow the [Kubernetes Tutorial](https://kubernetes.io/docs/tutorials/)
 
 ### References
 * [Kubernetes Tutorial](https://kubernetes.io/docs/tutorials/)
