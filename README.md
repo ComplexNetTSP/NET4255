@@ -75,7 +75,7 @@ def hello_world():
 Now you can run the web serveur you just created
 
 ```bash
-$ flask --app hello run
+flask --app hello run
 * Serving Flask app 'hello'
 * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
 ```
@@ -164,16 +164,16 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
     ```
     * Export the kubeconfig file
     ```bash
-    $ export KUBECONFIG=$HOME/.kube/kubeconfig.yml
+    export KUBECONFIG=$HOME/.kube/kubeconfig.yml
     ```
 * Now, you should be able to connect to the Kubernetes cluster. Check the following command in order to check the connection. 
 ```bash
-$ kubectl cluster-info
+kubectl cluster-info
 ...
 ```
 * You should see a namespace with your name !!! with the following command:
 ```bash
-$ kubectl get namespace
+kubectl get namespace
 ```
 
 * Now that you are set up, follow the [Kubernetes Tutorial](https://kubernetes.io/docs/tutorials/)
@@ -188,15 +188,15 @@ Create your first deployment in command line with the **kubectl** command:
    * Without **any service**
 * Check that your deployment is successful in the [google cloud console](https://console.cloud.google.com/kubernetes/) and with the command line: 
 ```bash 
-$ kubectl get deployments -o wide
+kubectl get deployments -o wide
 ...
-$ kubectl get pods -o wide
+kubectl get pods -o wide
 ...
 ```
 
 * Test the pod web server id correctly running with port-forwarding 
 ```bash
-$ kubectl port-forward pods/xxxx your pod name xxxx :xxx pod port xxx --namespace=xxxx your namespace xxxx
+kubectl port-forward pods/xxxx your pod name xxxx :xxx pod port xxx --namespace=xxxx your namespace xxxx
 Forwarding from 127.0.0.1:54127 -> 5000
 ```
 Now you can connect with your browser to `http://127.0.0.1:54127` to access the webnodb website.
@@ -220,7 +220,7 @@ Now you can connect with your browser to `http://127.0.0.1:54127` to access the 
 * Connect to the cluster through a proxy with the following command or use port-forwarding to test your application:
 
 ```bash
-$ kubectl proxy
+kubectl proxy
 Starting to serve on 127.0.0.1:8001 
 ```
 
