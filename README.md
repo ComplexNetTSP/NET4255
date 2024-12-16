@@ -232,7 +232,7 @@ Now should be able to access to the **webnodb** web page at the following url `h
   
 ## Challenge 8: Deploy on the Kubernetes cluster your website (webdb) and the respective mongodb database (2pts)
 
-* Deploy the "webdb" web service with 3 replica and its related service (**NodePort**)
+* Deploy the "webdb" web service with 3 replica and its related service (**ClusterIP**)
 * Deploy the "mongodb" database and its related service (**ClusterIP**)
 * Connect the "webdb" Pod to the database using KubeDNS
 * Explain the difference between a NodePort Service and a ClusterIP service
@@ -248,10 +248,20 @@ Now should be able to access to the **webnodb** web page at the following url `h
   * Show the container IP address and the hostname of each container
   * Show the container ports 
 
-### References 
+### References
 * [Connecting Applications with Services](https://kubernetes.io/docs/tutorials/services/connect-applications-service/)
 
-## Challenge 9: Expose your services (1pts)
+## Challenge 9: Liveness Probes (1pts)
+* Define the **Liveness Probe** for each container in your chart.
+* Note that each application may require a specific type of probe.
+* Explain why you have chosen a particular type of probe for a particular application.
+    * What is your liveness probing strategy for the web servers?
+    * What is your liveness probing strategy for the database?
+
+### References 
+* [Configure Liveness Probes in Kubernetes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
+
+## Challenge 10: Expose your services (1pts)
 * Create a Ingress in order to expose your web application ("webnodb" and "webdb")
   * In the cluster, we use MetalLB (bare metal load balancer) to handle incoming Ingress traffic. [Here](https://8grams.medium.com/metallb-a-load-balancer-for-bare-metal-kubernetes-clusters-ef8a9e00c2bd) you can find some documentation about the specifics of MetalLB (only useful for the schema).
   * Don't forget to deploy your Ingress in your own namespace !!!
@@ -267,7 +277,7 @@ Now should be able to access to the **webnodb** web page at the following url `h
 ### References
 * [Kubernetes Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 
-## Challenge 10: Automate your deployment with HELM (1pts)
+## Challenge 11: Automate your deployment with HELM (1pts)
 * Create a HELM Chart to deploy the whole infrastructure
 * Use ConfigMaps to store database hostname and port information
 
@@ -275,7 +285,7 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * [Use ConfigMaps in Kubernetes](https://kubernetes.io/docs/concepts/configuration/configmap/)
 * [Getting started with HELM](https://helm.sh/docs/chart_template_guide/getting_started/)
 
-## Challenge 11: Update the mongodb database Deployment with a StatefulSet (1pts)
+## Challenge 12: Update the mongodb database Deployment with a StatefulSet (1pts)
 * Instead of a traditional deployment use a StafulSet to deploy your "mongodb" database 
 * Use a Persistant Volume to store the database content
   *  Stockage ressource : 0.1 Go
@@ -294,29 +304,19 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * [Kubernetes persistent volumes and dynamic provisionning](https://kubernetes.io/fr/docs/concepts/storage/persistent-volumes/)
 * [How to set a Persistent Volume Claim with StatefulSet in Kubernetes?](https://stackoverflow.com/questions/65266223/how-to-set-pvc-with-statefulset-in-kubernetes)
 
-## Challenge 12: Rolling update (1pts)
+## Challenge 13: Rolling update (1pts)
 * Update the version number in each of the HTML page of the respective website ("webdb" and "webnodb") and rebuild their repective docker container (and bump up their version humber)
 * Deploy your new container as a rolling update
 
 ### References 
 * [Performing a Rolling Update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/)
 
-## Challenge 13: Automatic scaling (1pts)
+## Challenge 14: Automatic scaling (1pts)
 * Create a deployment that spin a new pod when the CPU utilization of a pod cross a certain threasold (e.g.: 60% Utilization)
 * Limit to maximum number of pods to be deploy to 10 pods
 
 ### References
 * [Horizontal Scaling with Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
-
-## Challenge 14: Liveness Probes (1pts)
-* Define the **Liveness Probe** for each container in your chart.
-* Note that each application may require a specific type of probe.
-* Explain why you have chosen a particular type of probe for a particular application.
-    * What is your liveness probing strategy for the web servers?
-    * What is your liveness probing strategy for the database?
-
-### References 
-* [Configure Liveness Probes in Kubernetes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
 
 ## Challenge 15: Create a Network policies (1pts)
 * Create a Network policy that restrict access to the database only to IP address corresponding to your Web Pods
