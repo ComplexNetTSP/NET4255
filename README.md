@@ -252,7 +252,7 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * [Connecting Applications with Services](https://kubernetes.io/docs/tutorials/services/connect-applications-service/)
 
 ## Challenge 9: Liveness Probes (1pts)
-* Define the **Liveness Probe** for each container in your chart.
+* Define a **Liveness Probe** for each container.
 * Note that each application may require a specific type of probe.
 * Explain why you have chosen a particular type of probe for a particular application.
     * What is your liveness probing strategy for the web servers?
