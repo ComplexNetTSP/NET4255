@@ -160,7 +160,7 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
   * Move the `net4255.yml` file to `~/.kube:
   ```bash
   mkdir ~/.kube
-  mv ~/Downloads/net4255.yaml ~/.kube
+  mv ~/Downloads/net4255.yaml ~/.kube/config
   ```
   * Export the kubeconfig file
   ```bash
