@@ -157,7 +157,7 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
   * In Rancher web interface: go to "Cluster Management".
   * Click on the "net4255" cluster, then on "Download KubeConfig".
   * After this step you should have `net4255.yml` file on your laptop, inside your Downloads folder. This file will enable you to get access to the kubernetes cluster.
-  * Move the `net4255.yml` file to `~/.kube:
+  * Move the `net4255.yml` file to `~/.kube/config`:
   ```bash
   mkdir ~/.kube
   mv ~/Downloads/net4255.yaml ~/.kube/config
