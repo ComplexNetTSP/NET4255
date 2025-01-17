@@ -146,7 +146,6 @@ Add a [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-b
   * Show the container ports 
 
 ### References 
-* [Sample Load balancing solution with Docker and Nginx](https://towardsdatascience.com/sample-load-balancing-solution-with-docker-and-nginx-cf1ffc60e644)
 * [NGINX](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/)
 
 ## Challenge 5: Learn Kubernetes with the online tutorial (1pts)
