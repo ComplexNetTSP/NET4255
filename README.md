@@ -294,6 +294,7 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * What is a headless service, how pods are named with headless service?
 * Update your previous Helm chart accordinly
 * Your first database in the StatefulSet (example: mongo-0) should have a valid DNS hostname
+* As storageClassName in your Persistent Volume Claim, set `longhorn`
 
 ### References
 * [Kubernetes StatefulSet simply explained](https://youtu.be/pPQKAR1pA9U?si=as0jDo02sCPmBR43)
