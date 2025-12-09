@@ -342,19 +342,58 @@ Now should be able to access to the **webnodb** web page at the following url `h
 ## Challenge 18: Create a REST API endpoint instead of directly querying the database (1 pt)
 * Develop a new flask container which will handle the REST API GET request:
   * Your endpoint should be in the form "http://xxxxx/api/v1/db?limit=10", which should return the 10 most recent elements inserted into the database.
+  * The REST API endpoint should be exposed to the Ingress controler at the following url: http://webdb.[your_namespace].net4255.luxbulb.org/api/
 
 ### References
 * [Building a rest API with flask](https://www.geeksforgeeks.org/python/python-build-a-rest-api-using-flask/)
   
 ## Challenge 19: Update your web server to use the REST API instead of the of database query (1 pt)
+* Update your website in order to make the
+
+```html
+<HTML>
+<HEAD>
+  <TITLE>Sample HTML Page</TITLE>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(window).on('load', function() {
+      // Replace the below JSON data with your get request to fetch data
+      jsonData = [{
+        "name": "John Doe",
+        "age": 30,
+        "city": "New York"
+      },{
+        "name": "Jane Doe",
+        "age": 35,
+        "city": "New York"
+      }];
+      //
+      console.log(jsonData);
+      var datatable = document.getElementById('data');
+      var ul = document.createElement('ul');
+      for (var i = 0; i < jsonData.length; ++i) {
+        var li = document.createElement('li');
+        li.innerHTML = jsonData[i].name + ', ' + jsonData[i].age + ', ' + jsonData[i].city;
+        ul.appendChild(li);      
+      }
+      datatable.appendChild(ul);                               
+    });   
+  </script>
+</HEAD>
+<BODY>
+    <H1>Welcome to the Sample HTML Page</H1>
+    <P>This is a simple HTML document used to demonstrate basic HTML structure.</P>
+    <div id="data"></div>
+</BODY>
+</HTML>
+```
 
 ## Challenge 20: Deploy a Redis cache in your infrastructure (1 pt)
 * Your webpage should display the number of visitor who requested the webpage nad remain consistent across replicas.
   * Create a new endpoint in your REST API http://xxxxx/api/v1/visit which implement a GET request
   * Create a new endpoint in your REST API http://xxxxx/api/v1/visit which implement a POST request
-* 
-    
-    * Each time a page is loaded, you should increment the number of visits to that page. 
+  * Each time a page is loaded, your page should send a post request to API endpoint which will in turn increment the number of visit in a REDIS cache.
+  *  
 * Explain the advantage of using a redis cache in this case.
 * Update the drawing of your new infrastructure (services, etc)
 
