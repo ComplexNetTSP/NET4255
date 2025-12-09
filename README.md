@@ -341,14 +341,14 @@ Now should be able to access to the **webnodb** web page at the following url `h
 
 ## Challenge 18: Create a REST API endpoint instead of directly querying the database (1 pt)
 * Develop a new flask container which will handle the REST API GET request:
-  * Your endpoint should be in the form "http://xxxxx/api/v1/db?limit=10", which should return the 10 most recent elements inserted into the database.
+  * Your endpoint should be in the form "http://webdb.[your_namespace].net4255.luxbulb.org/api/db?limit=10", which should return the 10 most recent elements inserted into the database.
   * The REST API endpoint should be exposed to the Ingress controler at the following url: http://webdb.[your_namespace].net4255.luxbulb.org/api/
 
 ### References
 * [Building a rest API with flask](https://www.geeksforgeeks.org/python/python-build-a-rest-api-using-flask/)
   
 ## Challenge 19: Update your web server to use the REST API instead of the of database query (1 pt)
-* Update your website in order to make the
+* Modify your website so that the REST API request is made directly from a JavaScript function in your HTML, rather than from the Flask backend.
 
 ```html
 <HTML>
@@ -356,28 +356,26 @@ Now should be able to access to the **webnodb** web page at the following url `h
   <TITLE>Sample HTML Page</TITLE>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
-    $(window).on('load', function() {
+    $(window).on('load', async function() {
       // Replace the below JSON data with your get request to fetch data
-      jsonData = [{
-        "name": "John Doe",
-        "age": 30,
-        "city": "New York"
-      },{
-        "name": "Jane Doe",
-        "age": 35,
-        "city": "New York"
-      }];
+      var jsonData = await loadData();
       //
       console.log(jsonData);
       var datatable = document.getElementById('data');
       var ul = document.createElement('ul');
       for (var i = 0; i < jsonData.length; ++i) {
         var li = document.createElement('li');
-        li.innerHTML = jsonData[i].name + ', ' + jsonData[i].age + ', ' + jsonData[i].city;
+        li.innerHTML = jsonData[i].title;
         ul.appendChild(li);      
       }
       datatable.appendChild(ul);                               
     });   
+
+    async function loadData() {
+      const resp = await fetch("https://dummy-json.mock.beeceptor.com/todos");
+      const data = await resp.json();
+      return data;
+    }
   </script>
 </HEAD>
 <BODY>
