@@ -340,17 +340,20 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * Create a Helm Chart that deploy a Master-Slave architecture with mongodb 
 
 ## Challenge 18: Create a REST API endpoint instead of directly querying the database (1pts)
-* Develop a new flask container which will handle the REST API endpoint:
+* Develop a new flask container which will handle the REST API GET request:
   * Your endpoint should be in the form "http://xxxxx/api/v1/db?limit=10", which should return the 10 most recent elements inserted into the database.
- 
-# Challenge 19: Update your web server to use the REST API instead of the of database query (1pts)
 
 ### References
 * [Building a rest API with flask](https://www.geeksforgeeks.org/python/python-build-a-rest-api-using-flask/)
+  
+## Challenge 19: Update your web server to use the REST API instead of the of database query (1pts)
 
 ## Challenge 18: Deploy a Redis cache in your infrastructure (1pts)
-* Update your site (with and without db) to display a counter showing the number of visits.
-    * Your webpage should display the current number of visits and remain consistent across replicas.
+* Your webpage should display the number of visitor who requested the webpage nad remain consistent across replicas.
+  * Create a new endpoint in your REST API http://xxxxx/api/v1/visit which implement a GET request
+  * Create a new endpoint in your REST API http://xxxxx/api/v1/visit which implement a POST request
+* 
+    
     * Each time a page is loaded, you should increment the number of visits to that page. 
 * Explain the advantage of using a redis cache in this case.
 * Update the drawing of your new infrastructure (services, etc)
