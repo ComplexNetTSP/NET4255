@@ -42,7 +42,7 @@ On your own computer install the following software:
     ```
 * IDE ([VSCode](https://code.visualstudio.com/), etc)
 
-## Challenge 1: Create a Simple Web page and develop a docker file for your website (2 pts)
+## Challenge 1: Create a Simple Web page and develop a docker file for your website (1 pts)
 
 * Build a one page Flask application which contains the following elements:
   * Your name
@@ -87,7 +87,7 @@ See the [quickstart guide](https://flask.palletsprojects.com/en/3.0.x/quickstart
 * [Containerize an application](https://docs.docker.com/get-started/02_our_app/)
 * [Christian Lempa - Learning Docker // Build Container Images](https://youtu.be/JDw3ZdQcv2g?si=ZkA7qXYBYNrPpvlW)
 
-## Challenge 2: Create docker compose to deploy a mongodb database server (2pts)
+## Challenge 2: Create docker compose to deploy a mongodb database server (1pts)
 * Find a already made [mongodb](https://www.mongodb.com/) docker container (for instance the [official mongodb docker image](https://hub.docker.com/_/mongo/tags?page=88))
 * Use docker compose to deploy your mongodb database
 * Test your application and add record in your database manually with the mongod command ([see the install requirement for mongodb](https://www.mongodb.com/docs/v3.0/tutorial/install-mongodb-on-windows/)
@@ -102,7 +102,7 @@ See the [quickstart guide](https://flask.palletsprojects.com/en/3.0.x/quickstart
 ### Why mongodb ?
 MongoDB is classified as a NoSQL database program, MongoDB uses JSON-like documents. MongoDB provides high availability with replica sets. A replica set consists of two or more copies of the data. Each replica-set member may act in the role of primary or secondary replica at any time. All writes and reads are done on the primary replica by default. Secondary replicas maintain a copy of the data of the primary using built-in replication. When a primary replica fails, the replica set automatically conducts an election process to determine which secondary should become the primary. Secondaries can optionally serve read operations, but that data is only eventually consistent by default. It's easier to create a master/slave database cluster when using nosql. 
 
-## Challenge 3: Create docker compose file to deploy a simple web service (flask + mongodb) (2pts) 
+## Challenge 3: Create docker compose file to deploy a simple web service (flask + mongodb) (1pts) 
 * Update your Flask application and add the following items:
   * Your name
   * Your project name
@@ -229,7 +229,7 @@ Now should be able to access to the **webnodb** web page at the following url `h
 * [Manually constructing apiserver proxy URLs](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster-services/#manually-constructing-apiserver-proxy-urls)
 * [Resource Management for Pods and Containers](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
   
-## Challenge 8: Deploy on the Kubernetes cluster your website (webdb) and the respective mongodb database (2pts)
+## Challenge 8: Deploy on the Kubernetes cluster your website (webdb) and the respective mongodb database (1pts)
 
 * Deploy the "webdb" web service with 3 replica and its related service (**ClusterIP**)
 * Deploy the "mongodb" database and its related service (**ClusterIP**)
@@ -325,7 +325,7 @@ Now should be able to access to the **webnodb** web page at the following url `h
 ### References 
 * [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 
-## Challenge 16: Create a distributed database system (I) (2pts)
+## Challenge 16: Create a distributed database system (I) (1pts)
 * Create a master-slave architecture with mongodb
 * Don't use already made Helm chart to achive this challenge
 * Manualy configure each instance of the mongodb database to be part of a Replica Set (meaning that a given master database is replicated to all the slaves in the cluster)
@@ -348,7 +348,7 @@ Now should be able to access to the **webnodb** web page at the following url `h
   
 ## Challenge 19: Update your web server to use the REST API instead of the of database query (1pts)
 
-## Challenge 18: Deploy a Redis cache in your infrastructure (1pts)
+## Challenge 20: Deploy a Redis cache in your infrastructure (1pts)
 * Your webpage should display the number of visitor who requested the webpage nad remain consistent across replicas.
   * Create a new endpoint in your REST API http://xxxxx/api/v1/visit which implement a GET request
   * Create a new endpoint in your REST API http://xxxxx/api/v1/visit which implement a POST request
