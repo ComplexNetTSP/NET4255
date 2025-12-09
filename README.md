@@ -339,6 +339,15 @@ Now should be able to access to the **webnodb** web page at the following url `h
 ## Challenge 17: Create a distributed database system (II) (1pts)
 * Create a Helm Chart that deploy a Master-Slave architecture with mongodb 
 
+## Challenge 18: Create a REST API endpoint instead of directly querying the database (1pts)
+* Develop a new flask container which will handle the REST API endpoint:
+  * Your endpoint should be in the form "http://xxxxx/api/v1/db?limit=10", which should return the 10 most recent elements inserted into the database.
+ 
+# Challenge 19: Update your web server to use the REST API instead of the of database query (1pts)
+
+### References
+* [Building a rest API with flask](https://www.geeksforgeeks.org/python/python-build-a-rest-api-using-flask/)
+
 ## Challenge 18: Deploy a Redis cache in your infrastructure (1pts)
 * Update your site (with and without db) to display a counter showing the number of visits.
     * Your webpage should display the current number of visits and remain consistent across replicas.
@@ -348,10 +357,3 @@ Now should be able to access to the **webnodb** web page at the following url `h
 
 ### References 
 * [Redis Cache](https://www.geeksforgeeks.org/redis-cache/)
-
-## Challenge 19: Implement Hooks on Helm
-* Use Hooks to configure your ConfigMaps before and after the deployment of your helm chart
-* (Optional) Use hooks to save your database before updating helm chart
-
-### References 
-* [Helm Chart Hooks](https://www.golinuxcloud.com/kubernetes-helm-hooks-examples/)
